@@ -1,0 +1,15 @@
+{
+  "id": "2026-10-21_0745",
+  "date": "2026-10-21",
+  "start_time": "07:45",
+  "end_time": null,
+  "duration_min": null,
+  "mode": "assessment",
+  "status": "open",
+  "closed_late": false,
+  "phase_at_start": "assessment",
+  "completeness": "verbatim",
+  "items": [],
+  "student_report_present": false,
+  "files_touched": []
+}
