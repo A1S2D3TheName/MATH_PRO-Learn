@@ -12,10 +12,34 @@ sections:
   #     confidence: med          # low | med | high
   #     evidence:
   #       - {session: "2026-12-12_1100", item_id: "bank:...", outcome: solved_unaided, note: "…"}
-  num: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
-  frac: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
-  ratio: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
-  numsys: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
+  num:
+    proven_level: 2
+    proven_with_help: null
+    ceiling: null
+    confidence: low
+    evidence:
+      - {session: "2026-10-21_0718", item_id: "agent-generated:probe-num", outcome: solved_unaided, note: "обзор s2: 36+4·(125−45):8−27·2 = 22 без подсказок (вторым путём, первый отброшен самостоятельно); порядок действий не помнил — выбрал экспериментально; устный счёт медленный, компенсирует разложением/записью; эпизод калькулятора в отброшенном пути" }
+  frac:
+    proven_level: null
+    proven_with_help: null
+    ceiling: null
+    confidence: low
+    evidence:
+      - {session: "2026-10-21_0718", item_id: "agent-generated:probe-frac", outcome: unsolved, note: "обзор s2: (1 3/4)·2/5+(1/2):2 не завершён; обозначение смешанного числа не знал (справка агента + Google); перевод 2/5 в десятичную — застрял (выбрал 0,25); перенос промежуточных результатов с расхождениями; 1.25·0.25 без калькулятора не выполнил; гипотеза — начинать лесенку со ступени 1"}
+  ratio:
+    proven_level: null
+    proven_with_help: null
+    ceiling: null
+    confidence: low
+    evidence:
+      - {session: "2026-10-21_0718", item_id: "agent-generated:probe-ratio", outcome: partial, note: "обзор s2: +20%/−20% — цепочка 100→120→96→4 верна, самопроверка масштабом; смысл процента «от базы» объяснил своими словами; пробел — форма ответа: выразить в процентах не смог (дал 0,04); уровень не меняют (partial)"}
+  numsys:
+    proven_level: 2
+    proven_with_help: null
+    ceiling: null
+    confidence: low
+    evidence:
+      - {session: "2026-10-21_0718", item_id: "agent-generated:probe-numsys", outcome: solved_unaided, note: "обзор s2: −7+3·(−4)−(−15):3 = −14 без подсказок; письменное преобразование −(7+12−5) законно; словесное «числа все отрицательные» неточно (−(−5)=+5) — расхождение речи и записи"}
   nt: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
   alg: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
   eq: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}

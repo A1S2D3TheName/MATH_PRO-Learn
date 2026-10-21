@@ -1,0 +1,4 @@
+{"session": "2026-10-21_0718", "item_id": "agent-generated:probe-num", "outcome": "solved_unaided", "revealed": false, "hints_max_level": 0, "date": "2026-10-21"}
+{"session": "2026-10-21_0718", "item_id": "agent-generated:probe-frac", "outcome": "unsolved", "revealed": false, "hints_max_level": 0, "date": "2026-10-21"}
+{"session": "2026-10-21_0718", "item_id": "agent-generated:probe-ratio", "outcome": "partial", "revealed": false, "hints_max_level": 0, "date": "2026-10-21"}
+{"session": "2026-10-21_0718", "item_id": "agent-generated:probe-numsys", "outcome": "solved_unaided", "revealed": false, "hints_max_level": 0, "date": "2026-10-21"}
