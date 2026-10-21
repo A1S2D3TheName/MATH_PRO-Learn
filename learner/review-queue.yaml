@@ -1,5 +1,9 @@
 # Очередь повторений. Дозапись при закрытии сессии. Интервалы (дни): 1, 3, 7, 16, 35, 75.
 schema: 1
-items: []
+items:
+  - {ref: "topic:num-order-operations", due: "2026-10-22", streak: 1, last_session: "2026-10-21_0718"}
+  - {ref: "topic:numsys-add", due: "2026-10-22", streak: 1, last_session: "2026-10-21_0718"}
+  - {ref: "topic:ratio-percent-change", due: "2026-10-22", streak: 0, last_session: "2026-10-21_0718"}
+  - {ref: "topic:frac-convert", due: "2026-10-22", streak: 0, last_session: "2026-10-21_0718"}
 # Формат элемента:
 # - {ref: "bank:<source>:<id>" | "topic:<id>", due: "YYYY-MM-DD", streak: 0, last_session: "<id>"}
