@@ -1,0 +1,24 @@
+---
+id: "pykt"
+title: "pyKT — библиотека отслеживания усвоения (knowledge tracing)"
+url: "https://github.com/pykt-team/pykt-toolkit"
+license: "MIT"
+license_url: "https://github.com/pykt-team/pykt-toolkit/blob/main/LICENSE"
+redistribution: "full"
+fetch: "git clone https://github.com/pykt-team/pykt-toolkit && checkout ccbaf37b07e3e7ff7b2415475b2faacb967d54ea; см. sources/pykt/fetch.py"
+language: "en"
+levels: [3, 4, 5, 6, 7]
+retrieved: "2026-10-20"
+attribution: "pyKT toolkit contributors, MIT License."
+upstream_repo: "https://github.com/pykt-team/pykt-toolkit"
+upstream_commit: "ccbaf37b07e3e7ff7b2415475b2faacb967d54ea"
+role: "94 модуля моделей отслеживания усвоения (DKT, AKT, SAKT, SAINT, …) с готовыми форматами данных. Отвечает на вопрос «что ученик уже умеет, а что ещё нет» по истории ответов."
+limitations: "Глубокое обучение, тяжёлые зависимости (torch), формат данных — собственный (skill/question id). Для одного ученика избыточно; в MATH_PRO своё состояние в `mathpro/progress/store.py`."
+published: true
+runtime_integration: none — код не подключён к пользовательскому runtime
+status:
+  availability: reachable
+  download: downloaded
+  run: not_executed
+  item_qa: schema_validated
+  rights: permissive

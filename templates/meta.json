@@ -1,0 +1,15 @@
+{
+  "id": "{id}",
+  "date": "{date}",
+  "start_time": "{time}",
+  "end_time": null,
+  "duration_min": null,
+  "mode": "{mode}",
+  "status": "open",
+  "closed_late": false,
+  "phase_at_start": "{phase}",
+  "completeness": "verbatim",
+  "items": [],
+  "student_report_present": false,
+  "files_touched": []
+}

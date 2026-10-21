@@ -1,0 +1,24 @@
+---
+id: "pyedmine"
+title: "pyedmine — алгоритмы отслеживания усвоения и когнитивной диагностики"
+url: "https://github.com/ZhijieXiong/pyedmine"
+license: "MIT"
+license_url: "https://github.com/ZhijieXiong/pyedmine/blob/main/LICENSE"
+redistribution: "full"
+fetch: "git clone https://github.com/ZhijieXiong/pyedmine && checkout 20af7967486e833899e589c37ae33ec1b28662d1; см. sources/pyedmine/fetch.py"
+language: "en"
+levels: [3, 4, 5, 6, 7]
+retrieved: "2026-10-20"
+attribution: "pyedmine contributors, MIT License."
+upstream_repo: "https://github.com/ZhijieXiong/pyedmine"
+upstream_commit: "20af7967486e833899e589c37ae33ec1b28662d1"
+role: "116 модулей: алгоритмы KT и CDM на чистом Python, с примерами и конфигами. Более лёгкая (без torch) альтернатива pyKT для одиночного ученика."
+limitations: "Состояние и API отличаются от pyKT; выбирать надо одно. Часть модулей требует numpy/pandas."
+published: true
+runtime_integration: none — код не подключён к пользовательскому runtime
+status:
+  availability: reachable
+  download: downloaded
+  run: not_executed
+  item_qa: schema_validated
+  rights: permissive

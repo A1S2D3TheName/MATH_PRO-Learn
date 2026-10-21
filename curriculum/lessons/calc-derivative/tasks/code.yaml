@@ -1,0 +1,105 @@
+tasks:
+  - id: C-01
+    type: code
+    role: supported
+    purpose: procedure
+    level: 2
+    outcome: LO-01
+    sections: [T01, T02]
+    minutes: 6
+    lang: python
+    runtime: "cpython>=3.12"
+    mode: code-insert
+    code_topics: [code-first-steps, code-variables, code-conditions, code-functions, code-exact, code-tests]
+    goal: Вычислять разностное отношение квадратичной функции в точной дробной арифметике и учитывать условие ненулевого шага.
+    entry: finite_quotient
+    prompt: |
+      Функция $f(x)=x^2$. Функция `finite_quotient(a, b, h)` получает
+      $x_0=\dfrac ab$ и целый шаг $h$. Она должна вернуть точное значение
+      $\dfrac{f(x_0+h)-f(x_0)}{h}$ парой `(числитель, знаменатель)`.
+      При $h=0$ разностное отношение не определено, поэтому функция возвращает `None`.
+      Заполните единственный пропуск; десятичные приближения использовать нельзя.
+    starter: |
+      from fractions import Fraction
+
+      def finite_quotient(a, b, h):
+          x0 = Fraction(a, b)
+          step = Fraction(h)
+          if step == 0:
+              return None
+          dy = (x0 + step) ** 2 - x0 ** 2
+          quotient = Fraction(0)  # SLOT
+          return quotient.numerator, quotient.denominator
+    slot: "quotient = Fraction(0)  # SLOT"
+    reference: quotient = Fraction(dy, step)
+    visible_tests:
+      - args: [1, 3, 2]
+        expected: [8, 3]
+      - args: [-1, 4, 1]
+        expected: [1, 2]
+    hidden_tests:
+      - args: [5, 7, 0]
+        expected: null
+        edge_case: true
+      - args: [3, 2, -2]
+        expected: [1, 1]
+      - seed: 20261014
+        count: 20
+        generator: fraction_and_integer
+        check: equals_reference
+    wrong_solutions:
+      - code: quotient = dy
+        expect: fails
+        note: возвращено только приращение функции без деления на шаг
+      - code: quotient = step / dy
+        expect: fails
+        note: отношение перевёрнуто
+      - code: quotient = dy * step
+        expect: fails
+        note: вместо деления выполнено умножение на шаг
+      - code: quotient = float(dy / step)
+        expect: forbidden
+        note: точная дробь преждевременно заменена десятичным приближением
+    allowed_imports: [fractions]
+    forbidden:
+      - {name: float, why: "разностное отношение в этой задаче требуется получить точно"}
+      - {name: numpy, why: "векторная библиотека не нужна для одного точного вычисления"}
+      - {name: sympy, why: "задача проверяет прямое вычисление по определению, а не символьную систему"}
+    timeout_ms: 1000
+    output_limit: 10000
+    check: exact
+    followup: Почему ветвь с $h=0$ нужно обработать до вычисления частного и почему конечный набор тестов не доказывает формулу для всех $x_0$ и $h$?
+    qa:
+      question: Какую математическую идею проверяет программа и зачем здесь класс Fraction?
+      answer: Программа буквально вычисляет отношение приращений; Fraction сохраняет точные рациональные значения, а не десятичные приближения.
+      graded: false
+    answer: quotient = Fraction(dy, step)
+    hints:
+      - В числителе уже сохранено приращение функции `dy`.
+      - Разностное отношение получают делением приращения функции на приращение аргумента.
+      - Создайте точное отношение вызовом `Fraction(dy, step)`.
+    solution: |
+      ### Ответ
+      `quotient = Fraction(dy, step)`
+
+      ### Идея
+      Код повторяет определение разностного отношения $\Delta y/\Delta x$.
+
+      ### Шаги
+      1. `Fraction` точно задаёт $x_0$ и шаг.
+      2. Выражение `dy` вычисляет $f(x_0+h)-f(x_0)$.
+      3. При ненулевом шаге делим `dy` на `step`.
+
+      ### Проверка
+      При $x_0=\dfrac13$ и $h=2$ получаем
+      $\dfrac{(1/3+2)^2-(1/3)^2}{2}=\dfrac83$.
+
+      ### Типичная ошибка
+      Вернуть `dy`, забыв разделить приращение функции на шаг.
+    feedback:
+      correct: Получено точное разностное отношение, а нулевой шаг обработан отдельно.
+      wrong:
+        what: Хотя бы один тест не пройден.
+        why: Возможно, возвращено приращение функции, отношение перевёрнуто или использована неточная арифметика.
+        fix: Сравните строку в пропуске с формулой $\Delta y/\Delta x$.
+        next: Раздел T02, определение производной через предел разностного отношения.

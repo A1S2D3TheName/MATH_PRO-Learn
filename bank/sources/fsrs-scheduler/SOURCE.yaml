@@ -1,0 +1,24 @@
+---
+id: "fsrs-scheduler"
+title: "Free Spaced Repetition Scheduler — спецификация алгоритма FSRS"
+url: "https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler"
+license: "MIT"
+license_url: "https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler/blob/main/LICENSE"
+redistribution: "full"
+fetch: "git clone https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler && checkout 93ed713fd9c139fa12be9bba8c080a682a7c503d; см. sources/fsrs-scheduler/fetch.py"
+language: "en"
+levels: [3, 4, 5, 6, 7]
+retrieved: "2026-10-20"
+attribution: "Free Spaced Repetition Scheduler contributors, MIT License."
+upstream_repo: "https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler"
+upstream_commit: "93ed713fd9c139fa12be9bba8c080a682a7c503d"
+role: "10 разделов с описанием модели памяти (сложность, стабильность, извлекаемость) и законов забывания. Теоретическое основание для блока delayed retention."
+limitations: "Только README, кода нет. Формулы вынесены на внешнюю вики, в репозитории их нет — при цитировании нужна ссылка на вики FSRS."
+published: true
+runtime_integration: none — спецификация не подключена к пользовательскому runtime
+status:
+  availability: reachable
+  download: downloaded
+  run: not_executed
+  item_qa: schema_validated
+  rights: permissive

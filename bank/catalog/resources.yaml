@@ -1,0 +1,742 @@
+# Каталог источников math_repo_education — машинночитаемый.
+# Сгенерирован tools/build_catalog.py; правьте SOURCE.yaml, а не этот файл.
+generated: '2026-10-20'
+count: 22
+resources:
+  - id: ai-tutor-socratic
+    title: "MathMisconception-IN — граф знаний, каталог заблуждений и сократический каркас"
+    url: "https://github.com/NavyashreeNS/ai-tutor"
+    license: "MIT"
+    license_url: "https://github.com/NavyashreeNS/ai-tutor/blob/main/LICENSE"
+    redistribution: full
+    fetch: "git clone https://github.com/NavyashreeNS/ai-tutor && checkout a276b1ca876c04de2d80090df4a2cf899dd3cbd2; см. sources/ai-tutor-socratic/fetch.py"
+    language: "en"
+    levels: [1, 2, 3]
+    retrieved: '2026-10-20'
+    attribution: "MathMisconception-IN, MIT License."
+    upstream_repo: "https://github.com/NavyashreeNS/ai-tutor"
+    upstream_commit: "a276b1ca876c04de2d80090df4a2cf899dd3cbd2"
+    role: "Готовый каркас для блока Error diagnosis: 18 концепций с пререквизитами и сложностью, 33 типичных заблуждения, 51 вопрос с привязкой к заблуждениям и ветвлением follow-up. Приём — ступени 1–3 (числа, дроби, проценты)."
+    limitations: "Схема ориентирована на NCERT (Индия), в `items/` нет текстов правил и пояснений — только идентификаторы и краткие подписи. Каталог заблуждений заявляет 34 записи, фактически содержит 33 — расхождение зафиксировано, не исправлено. Английский язык."
+    published: true
+    runtime_integration: "none — каталог заблуждений не подключён к пользовательскому runtime и не сопоставлен с topic_id"
+    status:
+      availability: reachable
+      download: downloaded
+      run: not_executed
+      item_qa: schema_validated
+      rights: permissive
+    competencies: [error_diagnosis, immediate_mastery]
+    domains: [arithmetic, fractions, ratios, percent]
+    item_count: 102
+    item_files:
+      - path: sources/ai-tutor-socratic/items/knowledge-graph.jsonl
+        rows: 18
+        bytes: 11207
+        sha256: 8112b97f2c3d3700e42eb7cd4a65dce92cdd468685f32403004f05425eb3a4c6
+      - path: sources/ai-tutor-socratic/items/misconceptions.jsonl
+        rows: 33
+        bytes: 15772
+        sha256: 4dd7de9f98ad0e2cb0dafb9e749978cd7fe82d95a5d700e0b96976f81374e74e
+      - path: sources/ai-tutor-socratic/items/questions.jsonl
+        rows: 51
+        bytes: 32988
+        sha256: bee9275c32c63a580b60cb20246bbebb46c8dfa31e0d8c3049c523dddf12ac66
+  - id: aptitude-test-platform
+    title: "Aptitude Test Platform — 600 вопросов двух разделов"
+    url: "https://github.com/jidvish/aptitude-test-platform-public"
+    license: "не указана (файла лицензии нет; происхождение исходных markdown-файлов не документировано)"
+    license_url: "https://github.com/jidvish/aptitude-test-platform-public"
+    redistribution: index-only
+    fetch: "git clone https://github.com/jidvish/aptitude-test-platform-public && checkout c62e962bf34b91d354d5d9fecfb7bae2f2094a52; см. sources/aptitude-test-platform/fetch.py"
+    language: "en"
+    levels: [3, 4, 5, 6]
+    retrieved: '2026-10-20'
+    attribution: "Aptitude Test Platform by jidvish — лицензия не указана, тексты не копируются."
+    upstream_repo: "https://github.com/jidvish/aptitude-test-platform-public"
+    upstream_commit: "c62e962bf34b91d354d5d9fecfb7bae2f2094a52"
+    role: "Количественные способности (300) и логическое мышление (300) по трём уровням, с разбором каждого решения. Оглавление полезно как карта тем количественных способностей."
+    limitations: "Тексты и разборы не копируются. Варианты ответа в сгенерированном банке — машинно сгенерированные отвлекающие варианты; качество распределения правильных ответов не проверялось. Часть вопросов имеет в формулировке `$…$`-LaTeX."
+    published: true
+    runtime_integration: "none — оглавление не подключено к пользовательскому runtime и не сопоставлено с topic_id"
+    status:
+      availability: reachable
+      download: metadata_only
+      run: not_executed
+      item_qa: schema_validated
+      rights: unclear
+    competencies: [immediate_mastery, transfer]
+    domains: [arithmetic, reasoning, discrete]
+    item_count: 600
+    index:
+      total_positions: 600
+      preview_records: 0
+      positional_records: 600
+      contains_task_text: false
+      contains_answers: false
+      contains_solutions: false
+    item_files:
+      - path: sources/aptitude-test-platform/items/questions-index.jsonl
+        rows: 600
+        bytes: 346182
+        sha256: 4a2d15806ff3662702cf394dcaef336e6ccf57b6daca35f916037f952cb2238e
+  - id: educdm
+    title: "EduCDM — зоопарк моделей когнитивной диагностики"
+    url: "https://github.com/bigdata-ustc/EduCDM"
+    license: "Apache-2.0"
+    license_url: "https://github.com/bigdata-ustc/EduCDM/blob/main/LICENSE"
+    redistribution: full
+    fetch: "git clone https://github.com/bigdata-ustc/EduCDM && checkout c610e6ae7f45cfe8f1106a1c342d4ef5a357472e; см. sources/educdm/fetch.py"
+    language: "en"
+    levels: [3, 4, 5, 6, 7]
+    retrieved: '2026-10-20'
+    attribution: "EduCDM (Zhou et al.), Apache-2.0."
+    upstream_repo: "https://github.com/bigdata-ustc/EduCDM"
+    upstream_commit: "c610e6ae7f45cfe8f1106a1c342d4ef5a357472e"
+    role: "31 модуль моделей когнитивной диагностики (DINA, DINO, MIRT, IRT, PCM, …) — готовые алгоритмы, чтобы оценивать не «сколько баллов», а «какие компетенции освоены». Инструмент для диагностики по компетенциям."
+    limitations: "Требует PyTorch и своих форматов данных; в MATH_PRO подход «ошибка → компетенция» реализован через `errors/catalog.yaml`, а не через CDM. Это опора и обоснование, а не готовый модуль."
+    published: true
+    runtime_integration: "none — код и документация EduCDM не подключены к пользовательскому runtime; используются как обоснование метода диагностики"
+    status:
+      availability: reachable
+      download: downloaded
+      run: not_executed
+      item_qa: schema_validated
+      rights: permissive
+    competencies: [immediate_mastery, error_diagnosis]
+    domains: [meta]
+    item_count: 31
+    item_files:
+      - path: sources/educdm/items/models.jsonl
+        rows: 31
+        bytes: 14251
+        sha256: 76d254a647da1705fb5fc2a291ef2d37b28b0dea521ea528d2e1af5b0eaceaef
+  - id: exercism-python
+    title: "Exercism Python — 163 проверяемых упражнения"
+    url: "https://github.com/exercism/python"
+    license: "MIT"
+    license_url: "https://github.com/exercism/python/blob/main/LICENSE"
+    redistribution: full
+    fetch: "git clone https://github.com/exercism/python && checkout 6105f6d9d3ef66ce3d5c8f529d2882af3d76b706; см. sources/exercism-python/fetch.py"
+    language: "en"
+    levels: [3, 4, 5, 6]
+    retrieved: '2026-10-20'
+    attribution: "Exercism Python track, MIT License."
+    upstream_repo: "https://github.com/exercism/python"
+    upstream_commit: "6105f6d9d3ef66ce3d5c8f529d2882af3d76b706"
+    role: "Практика по Python с машинно-проверяемыми тестами: 131 practice-упражнение и 32 concept-упражнения. У каждого — постановка, `tests.toml` с числом проверок и эталонное решение. Готовая система проверки для блока Python."
+    limitations: "Тексты и тесты на английском; к каждому упражнению прилагается эталонное решение — его нельзя показывать ученику до попытки."
+    published: true
+    runtime_integration: "none — упражнения не подключены к пользовательскому runtime и не сопоставлены с topic_id"
+    status:
+      availability: reachable
+      download: downloaded
+      run: not_executed
+      item_qa: schema_validated
+      rights: permissive
+    competencies: [immediate_mastery, independence]
+    domains: [python]
+    item_count: 163
+    item_files:
+      - path: sources/exercism-python/items/exercises.jsonl
+        rows: 163
+        bytes: 492574
+        sha256: d72dc5a341de3e3c44dbabb0bac68dbf45474ad4b2541a133c719d855455ff8f
+  - id: forallx
+    title: "forallx — учебник логики P. D. Magnus (CC BY 4.0)"
+    url: "https://github.com/OpenLogicProject/forallx"
+    license: "CC-BY-4.0"
+    license_url: "https://github.com/OpenLogicProject/forallx/blob/master/LICENSE.md"
+    redistribution: full
+    fetch: "git clone https://github.com/OpenLogicProject/forallx && checkout b9a872431eb97287fa039103db92a4bf27768b4b; см. sources/forallx/fetch.py"
+    language: "en"
+    levels: [4, 5, 6]
+    retrieved: '2026-10-20'
+    attribution: "forallx: Calgary Edition by P. D. Magnus, CC BY 4.0, Open Logic Project."
+    upstream_repo: "https://github.com/OpenLogicProject/forallx"
+    upstream_commit: "b9a872431eb97287fa039103db92a4bf27768b4b"
+    role: "Готовая теория для раздела «логика»: 93 раздела — пропозициональная и предикативная логика, таблицы истинности, семантика, доказательства, естественный язык. Текст приведён в Markdown (LaTeX-команды упрощены)."
+    limitations: "Перевод LaTeX в текст грубый: команды вроде `\\begin{}` убраны, математика частично потеряна. Для формул нужен исходный .tex. Упражнения в разборе не выделены — их надо искать по ключу `exercise`."
+    published: true
+    runtime_integration: "none — учебник не подключён к пользовательскому runtime и не сопоставлен с topic_id"
+    status:
+      availability: reachable
+      download: downloaded
+      run: not_executed
+      item_qa: schema_validated
+      rights: permissive
+    competencies: [immediate_mastery, error_diagnosis]
+    domains: [logic, proofs]
+    item_count: 93
+    item_files:
+      - path: sources/forallx/items/sections.jsonl
+        rows: 93
+        bytes: 275860
+        sha256: db45349e0011bac7c1506d6023ba77636d21b487ab850207a2887267a6d1f8cf
+  - id: fsrs-scheduler
+    title: "Free Spaced Repetition Scheduler — спецификация алгоритма FSRS"
+    url: "https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler"
+    license: "MIT"
+    license_url: "https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler/blob/main/LICENSE"
+    redistribution: full
+    fetch: "git clone https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler && checkout 93ed713fd9c139fa12be9bba8c080a682a7c503d; см. sources/fsrs-scheduler/fetch.py"
+    language: "en"
+    levels: [3, 4, 5, 6, 7]
+    retrieved: '2026-10-20'
+    attribution: "Free Spaced Repetition Scheduler contributors, MIT License."
+    upstream_repo: "https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler"
+    upstream_commit: "93ed713fd9c139fa12be9bba8c080a682a7c503d"
+    role: "10 разделов с описанием модели памяти (сложность, стабильность, извлекаемость) и законов забывания. Теоретическое основание для блока delayed retention."
+    limitations: "Только README, кода нет. Формулы вынесены на внешнюю вики, в репозитории их нет — при цитировании нужна ссылка на вики FSRS."
+    published: true
+    runtime_integration: "none — спецификация не подключена к пользовательскому runtime"
+    status:
+      availability: reachable
+      download: downloaded
+      run: not_executed
+      item_qa: schema_validated
+      rights: permissive
+    competencies: [delayed_retention]
+    domains: [meta]
+    item_count: 10
+    item_files:
+      - path: sources/fsrs-scheduler/items/docs.jsonl
+        rows: 10
+        bytes: 9892
+        sha256: 06771637d0c2aabebebb6419cd44a0a1b1d6358033ec6fff74bdb1f12b8bca67
+  - id: fsrs4anki
+    title: "FSRS4Anki — планировщик повторения на модели DSR"
+    url: "https://github.com/open-spaced-repetition/fsrs4anki"
+    license: "MIT"
+    license_url: "https://github.com/open-spaced-repetition/fsrs4anki/blob/main/LICENSE"
+    redistribution: full
+    fetch: "git clone https://github.com/open-spaced-repetition/fsrs4anki && checkout ff7c85cee735472d1c9cec0b9252d184087f74d8; см. sources/fsrs4anki/fetch.py"
+    language: "en"
+    levels: [3, 4, 5, 6, 7]
+    retrieved: '2026-10-20'
+    attribution: "FSRS4Anki contributors, MIT License."
+    upstream_repo: "https://github.com/open-spaced-repetition/fsrs4anki"
+    upstream_commit: "ff7c85cee735472d1c9cec0b9252d184087f74d8"
+    role: "Готовый планировщик отложенного повторения (delayed retention): 50 разделов документации и 40 экспериментальных ноутбуков с выводами по забыванию, сложности и стабильности памяти."
+    limitations: "Код — TypeScript/JavaScript, а не Python; в MATH_PRO планировщик написан свой (`mathpro/progress/scheduler.py`) — заимствовать модель, не код. Ноутбуки требуют Jupyter."
+    published: true
+    runtime_integration: "none — планировщик не подключён к пользовательскому runtime (в MATH_PRO используется собственная реализация mathpro/progress/scheduler.py)"
+    status:
+      availability: reachable
+      download: downloaded
+      run: not_executed
+      item_qa: schema_validated
+      rights: permissive
+    competencies: [delayed_retention]
+    domains: [meta]
+    item_count: 50
+    item_files:
+      - path: sources/fsrs4anki/items/docs.jsonl
+        rows: 50
+        bytes: 37402
+        sha256: 3dc42aaf2a2cf7496c80e3a2b381b967d46398903484e41a0d9eeac087ac1ed9
+  - id: imosllean4
+    title: "IMOSLLean4 — шортлист ММО с разбором и формализацией Lean 4"
+    url: "https://github.com/mortarsanjaya/IMOSLLean4"
+    license: "Apache-2.0"
+    license_url: "https://github.com/mortarsanjaya/IMOSLLean4/blob/main/LICENSE"
+    redistribution: full
+    fetch: "git clone https://github.com/mortarsanjaya/IMOSLLean4 && checkout 883b0326e585ac9a2148e5d67a4c335bb4f798be; см. sources/imosllean4/fetch.py"
+    language: "en"
+    levels: [7]
+    retrieved: '2026-10-20'
+    attribution: "IMOSLLean4 (Alireza Shokrollahi et al.), Apache-2.0."
+    upstream_repo: "https://github.com/mortarsanjaya/IMOSLLean4"
+    upstream_commit: "883b0326e585ac9a2148e5d67a4c335bb4f798be"
+    role: "72 задачи шортлиста ММО (2006–2024) с условием, ответом и разбором. Верхняя граница сложности: годится для проверки прочности и переноса, но не для входной диагностики."
+    limitations: "Только английский, только IMO-уровень. Задачи 2006–2024, не весь шортлист. Формализация Lean 4 требует отдельного toolchain."
+    published: true
+    runtime_integration: "none — задачи не подключены к пользовательскому runtime и не сопоставлены с topic_id"
+    status:
+      availability: reachable
+      download: downloaded
+      run: not_executed
+      item_qa: schema_validated
+      rights: permissive
+    competencies: [transfer]
+    domains: [nonstandard, proofs]
+    item_count: 72
+    item_files:
+      - path: sources/imosllean4/items/imo-shortlist.jsonl
+        rows: 72
+        bytes: 286449
+        sha256: 1acef7085b88e83d299ecdf9cf4ab62f88d1b496b763844e410e3e25704f6f6c
+  - id: iq-measurer
+    title: "IQ Measurer — 200 вопросов, 4 когнитивных домена"
+    url: "https://github.com/Ksound22/iq-measurer"
+    license: "не указана (в репозитории нет файла лицензии; по умолчанию — все права защищены)"
+    license_url: "https://github.com/Ksound22/iq-measurer"
+    redistribution: index-only
+    fetch: "git clone https://github.com/Ksound22/iq-measurer && checkout 401ceca03d0bd603c4cabd19085d717e97c00f86; см. sources/iq-measurer/fetch.py"
+    language: "en"
+    levels: [1, 2, 3, 4, 5, 6]
+    retrieved: '2026-10-20'
+    attribution: "IQ Measurer by Ksound22 — лицензия не указана, тексты не копируются."
+    upstream_repo: "https://github.com/Ksound22/iq-measurer"
+    upstream_commit: "401ceca03d0bd603c4cabd19085d717e97c00f86"
+    role: "Матрицы, вербальные аналогии, рабочая память, скорость обработки. Меряет общие способности, а не знание предмета: это отдельный контур, его нельзя складывать с предметными баллами в один показатель."
+    limitations: "Тексты вопросов не копируются (нет лицензии). В каталоге — только оглавление: домен, сложность, число вариантов, наличие SVG, лимит времени. Оценка IQ в самом приложении — самодельная («IRT-вдохновлённая»), психометрической валидности не имеет."
+    published: true
+    runtime_integration: "none — оглавление не подключено к пользовательскому runtime; контур общих способностей ведётся отдельно от предметного"
+    status:
+      availability: reachable
+      download: metadata_only
+      run: not_executed
+      item_qa: schema_validated
+      rights: unclear
+    competencies: [immediate_mastery]
+    domains: [reasoning, memory, speed]
+    item_count: 200
+    index:
+      total_positions: 200
+      preview_records: 0
+      positional_records: 200
+      contains_task_text: false
+      contains_answers: false
+      contains_solutions: false
+    item_files:
+      - path: sources/iq-measurer/items/questions-index.jsonl
+        rows: 200
+        bytes: 90627
+        sha256: cc322e8e7ef02c0abf01c45c7993369dc5ac1c09de1f5f26c3c61da14723eda3
+  - id: math-500-ru
+    title: "MATH-500-Russian — индекс 500 позиций (тексты не публикуются)"
+    url: "https://huggingface.co/datasets/evilfreelancer/MATH-500-Russian"
+    license: "не указана в карточке датасета; отдельная лицензия на русский перевод не подтверждена"
+    license_url: "https://huggingface.co/datasets/evilfreelancer/MATH-500-Russian"
+    redistribution: index-only
+    fetch: "python sources/math-500-ru/fetch.py — полностью offline: читает записанный preview.json (10 записей) и строит items/index.jsonl из 500 индексных позиций (10 с preview-метаданными, 490 позиционных). Сеть не используется, каталог raw/ не создаётся, полный test.jsonl не скачивается и не сохраняется."
+    language: "ru"
+    levels: [4, 5, 6, 7]
+    retrieved: '2026-10-20'
+    attribution: "Индекс соответствует MATH-500 (HuggingFaceH4) и PRM800K (OpenAI) — MIT — по полю unique_id; русский перевод evilfreelancer/MATH-500-Russian лицензии не имеет, его тексты не публикуются."
+    upstream_repo: "https://huggingface.co/datasets/evilfreelancer/MATH-500-Russian"
+    upstream_commit: "bf0c9320c19aba3ee331d84fd206804836213730"
+    role: "Единственный найденный русскоязычный банк олимпиадного уровня. Опубликован только индекс: 500 позиций, 10 из них с preview-метаданными (unique_id, предмет, уровень) и 490 позиционных заполнителей. Текстов задач, ответов и решений нет. Английский оригинал тех же задач целиком доступен под MIT в sources/math-prm800k."
+    limitations: "Отдельная лицензия на русский перевод не подтверждена — лицензия MIT исходного MATH на перевод не распространяется. Полный корпус не скачивается, не сохраняется и не пересобирается через любой предусмотренный путь. huggingface.co из окружения напрямую недоступен (ошибка TLS). Условия корпуса содержат служебную разметку [asy], рисунки не выводятся. Индекс не является набором решаемых задач: ни условий, ни ответов, ни разборов в нём нет."
+    published: true
+    runtime_integration: "none — индекс не подключён к пользовательскому runtime и не сопоставлен с topic_id"
+    status:
+      availability: reachable
+      download: metadata_only
+      run: not_executed
+      item_qa: schema_validated
+      rights: unclear
+    competencies: [immediate_mastery, transfer]
+    domains: [algebra, geometry, analysis, nonstandard]
+    item_count: 500
+    license_gate:
+      state: "blocked_pending_written_permission"
+      reason: "Права на машинный перевод (qwen2.5:32b) не подтверждены; в карточке датасета лицензия не указана."
+      to_change: "Только письменное разрешение правообладателя русского перевода, покрывающее публикацию текстов. Молчание мейнтейнера разрешением не считается."
+      review: "math_repo_education/review/RESOLUTION.md, finding R-01"
+    index:
+      total_positions: 500
+      preview_records: 10
+      positional_records: 490
+      contains_task_text: false
+      contains_answers: false
+      contains_solutions: false
+      preview_file: "sources/math-500-ru/preview.json"
+      preview_provenance: "метаданные 10 первых позиций взяты из MIT-датасета openai/prm800k (prm800k/math_splits/test.jsonl), коммит 7ecc794703b2877f63226f2477a49b34f9b25163"
+    item_files:
+      - path: sources/math-500-ru/items/index.jsonl
+        rows: 500
+        bytes: 250782
+        sha256: abec3f9921d2bbea98fb8be717adf8b8b34ebd05cacb739268ebceec465e720e
+  - id: math-prm800k
+    title: "MATH (12 500 задач) и PRM800K — пошаговые метки, нормализатор ответов"
+    url: "https://github.com/openai/prm800k"
+    license: "MIT"
+    license_url: "https://github.com/openai/prm800k/blob/main/LICENSE"
+    redistribution: full
+    fetch: "git clone https://github.com/openai/prm800k && checkout 7ecc794703b2877f63226f2477a49b34f9b25163; см. sources/math-prm800k/fetch.py"
+    language: "en"
+    levels: [3, 4, 5, 6, 7]
+    retrieved: '2026-10-20'
+    attribution: "MATH dataset (Dan Hendrycks et al.) и PRM800K (OpenAI), MIT License."
+    upstream_repo: "https://github.com/openai/prm800k"
+    upstream_commit: "7ecc794703b2877f63226f2477a49b34f9b25163"
+    role: "Ядро банка задач: 12 500 задач с ответами и решениями, уровни 1–5 по предметам, пошаговые метки человеческих и модельных решений, нормализатор ответов для автопроверки. Основа для Immediate mastery, Transfer и Error diagnosis."
+    limitations: "Задачи на английском. MATH — соревновательные задачи (AMC/AIME-уровень и выше), начальный уровень (арифметика, дроби) покрыт слабо: для ступеней 1–2 нужны другие источники. train-сплит PRM800K (456 МБ) не включён — разметка шагов приведена только для test."
+    published: true
+    runtime_integration: "none — банк не подключён к пользовательскому runtime и не сопоставлен с topic_id"
+    status:
+      availability: reachable
+      download: downloaded
+      run: not_executed
+      item_qa: schema_validated
+      rights: permissive
+    competencies: [immediate_mastery, transfer, error_diagnosis]
+    domains: [algebra, geometry, analysis, discrete, number-theory, nonstandard]
+    item_count: 16317
+    item_files:
+      - path: sources/math-prm800k/items/math-dataset.jsonl
+        rows: 12500
+        bytes: 15286800
+        sha256: a775728183c89a9d03640c876e912d685306a74e38d736c77110472d37bbaac2
+      - path: sources/math-prm800k/items/prm-phase1-steps.jsonl
+        rows: 1055
+        bytes: 9818190
+        sha256: 225bb1573607e5c57092d9237f5f218fea3232e5672a2542984da6f4ff133ff3
+      - path: sources/math-prm800k/items/prm-phase2-test.jsonl
+        rows: 2762
+        bytes: 10564602
+        sha256: 5367b62d206b4104234662d8dd4dbb7f2304139fa64f28abe9b7350b2997e31b
+  - id: mathforces
+    title: "Mathforces — 275 олимпиадных задач с подсказками и рейтингом MOHS"
+    url: "https://github.com/ervin-macic/mathforces"
+    license: "не указана (файла лицензии нет; условия ссылаются на AoPS — права третьих лиц)"
+    license_url: "https://github.com/ervin-macic/mathforces"
+    redistribution: index-only
+    fetch: "git clone https://github.com/ervin-macic/mathforces && checkout b068b4468c08f083d64e5552860b601bbc08937e; см. sources/mathforces/fetch.py"
+    language: "en"
+    levels: [5, 6, 7]
+    retrieved: '2026-10-20'
+    attribution: "Mathforces by ervin-macic; условия — Art of Problem Solving. Тексты не копируются."
+    upstream_repo: "https://github.com/ervin-macic/mathforces"
+    upstream_commit: "b068b4468c08f083d64e5552860b601bbc08937e"
+    role: "Оглавление 275 задач с темой, оценкой сложности по шкале MOHS, числом подсказок и ссылкой на источник. Полезно как карта сложности олимпиадных задач и как образец дизайна подсказок (три ступени: широкая → сильная → почти решение)."
+    limitations: "Условия, подсказки и решения не копируются. Задачи взяты с AoPS, поэтому распространять их нельзя. Подсказки в upstream сгенерированы моделью Gemini, то есть требуют вычитки человеком."
+    published: true
+    runtime_integration: "none — оглавление не подключено к пользовательскому runtime и не сопоставлено с topic_id"
+    status:
+      availability: reachable
+      download: metadata_only
+      run: not_executed
+      item_qa: schema_validated
+      rights: unclear
+    competencies: [transfer]
+    domains: [nonstandard, proofs, geometry]
+    item_count: 275
+    index:
+      total_positions: 275
+      preview_records: 0
+      positional_records: 275
+      contains_task_text: false
+      contains_answers: false
+      contains_solutions: false
+    item_files:
+      - path: sources/mathforces/items/problems-index.jsonl
+        rows: 275
+        bytes: 156821
+        sha256: 2a3c385b70171739af18a84214fdffa7ae7791ce4533018b39a63e00b0fbb449
+  - id: minif2f
+    title: "miniF2F — 244 задачи в неформальной постановке и на Lean 4"
+    url: "https://github.com/yangky11/miniF2F"
+    license: "MIT"
+    license_url: "https://github.com/yangky11/miniF2F/blob/main/LICENSE"
+    redistribution: full
+    fetch: "git clone https://github.com/yangky11/miniF2F && checkout c605019c4ebfda74d37bbb83e9c5774fc8b67c14; см. sources/minif2f/fetch.py"
+    language: "en"
+    levels: [6, 7]
+    retrieved: '2026-10-20'
+    attribution: "miniF2F — 244 задачи в неформальной постановке и на Lean 4"
+    upstream_repo: "https://github.com/yangky11/miniF2F"
+    upstream_commit: "c605019c4ebfda74d37bbb83e9c5774fc8b67c14"
+    role: "Мост «задача → формальное утверждение»: 244 неформальных условия с неформальным доказательством и ссылкой на формализацию Lean 4. Источник для блока доказательств и для проверки, что агент доводит задачу до формы."
+    limitations: "Только английский, верхний уровень (AIME/IMO-уровень). Формальные файлы `.lean` не копируются — в каталоге только ссылка и путь. В репозитории 488 записей: 244 в `valid` и 244 в `test`; заявленное «244» относится к одному сплиту."
+    published: true
+    runtime_integration: "none — задачи не подключены к пользовательскому runtime и не сопоставлены с topic_id"
+    status:
+      availability: reachable
+      download: downloaded
+      run: not_executed
+      item_qa: schema_validated
+      rights: permissive
+    competencies: [transfer, error_diagnosis]
+    domains: [nonstandard, proofs]
+    item_count: 488
+    item_files:
+      - path: sources/minif2f/items/minif2f.jsonl
+        rows: 488
+        bytes: 646393
+        sha256: 0692789543f4857c1dfbe63171bd0757ff83f3bc51d2dd71d913dfc2e406ca1c
+  - id: national-olympiads-bank
+    title: "Pythagoras — банк задач национальных олимпиад: публикация заблокирована по лицензии"
+    url: "https://github.com/Eisatopon/national-olympiads-bank"
+    license: "All rights reserved — копирование, зеркалирование и перепубликация запрещены без письменного разрешения; отдельно запрещено создание другого банка/датасета и использование для обучения и оценки машинных систем"
+    license_url: "https://github.com/Eisatopon/national-olympiads-bank/blob/main/LICENSE"
+    redistribution: index-only
+    fetch: "не существует: загрузчик удалён. Любая выкачка этого источника требует предварительного письменного разрешения правообладателя (eisatopon.gr), покрывающего конкретное использование. Пока разрешения нет, источник заблокирован."
+    language: "en"
+    levels: [4, 5, 6, 7]
+    retrieved: '2026-10-20'
+    attribution: "World Mathematical Olympiads Bank (Pythagoras), © Sokratis Romanidis (eisatopon.gr). Условия задач принадлежат организаторам соответствующих соревнований. Никакой материал этого источника в репозитории не публикуется."
+    upstream_repo: "https://github.com/Eisatopon/national-olympiads-bank"
+    upstream_commit: "53864f5760aa352fd8594dfdcb33e3d34c25da52"
+    role: "Источник заблокирован: лицензия запрещает создание другого банка задач на основе этих данных. В репозитории нет ни индекса, ни загрузчика. Запись в каталоге существует только как предупреждение для будущего интегратора."
+    limitations: "Публикация любых производных данных (индекса, оглавления, счётчиков, списка соревнований) запрещена лицензией без письменного разрешения. Условия задач дополнительно принадлежат организаторам соревнований (AMC, AIME и др. — MAA), и отдельной лицензии на них нет. Источник недоступен для проверки содержимого без разрешения; в репозитории не осталось ни одной записи его данных."
+    published: false
+    runtime_integration: "none — источник не публикуется и не подключён к пользовательскому runtime"
+    status:
+      availability: blocked_rights
+      download: not_downloaded
+      run: not_executed
+      item_qa: not_audited
+      rights: restricted
+    competencies: [transfer]
+    domains: [nonstandard, proofs]
+    item_count: 0
+    license_gate:
+      state: "blocked_pending_written_permission"
+      reason: "Upstream LICENSE прямо запрещает копирование, зеркалирование и перепубликацию файлов данных, создание другого банка/датасета на их основе и использование для обучения и оценки машинных систем."
+      removed: "Опубликованный индекс из 468 записей (259 соревнований + 209 служебных файлов) и загрузчик fetch.py, который его собирал."
+      removed_content_note: "Все 468 записей были ссылками/разделами (kind=section), а не уроками и не задачами: текстов условий, ответов и решений в индексе не было ни в одной записи (0 из 468)."
+      to_change: "Только письменное разрешение правообладателя (eisatopon.gr), покрывающее конкретный объём и способ использования. Молчание мейнтейнера разрешением не считается."
+      review: "math_repo_education/review/RESOLUTION.md, finding R-1"
+    item_files: []
+  - id: py-irt
+    title: "py-irt — оценивание параметров IRT и многомерного IRT"
+    url: "https://github.com/nd-ball/py-irt"
+    license: "MIT"
+    license_url: "https://github.com/nd-ball/py-irt/blob/master/LICENSE"
+    redistribution: full
+    fetch: "git clone https://github.com/nd-ball/py-irt && checkout 6514928ec753771c8858bf16581e9715d6025ed9; см. sources/py-irt/fetch.py"
+    language: "en"
+    levels: [3, 4, 5, 6, 7]
+    retrieved: '2026-10-20'
+    attribution: "py-irt contributors (форк nd-ball/py-irt), MIT License."
+    upstream_repo: "https://github.com/nd-ball/py-irt"
+    upstream_commit: "6514928ec753771c8858bf16581e9715d6025ed9"
+    role: "16 модулей: 1PL/2PL/3PL IRT, многомерный MIRT, обработка anchor-вопросов, экспорт для CAT. Техническая опора для адаптивного тестирования."
+    limitations: "Оригинальный `ets/py-irt` в этом окружении недоступен (404); взят поддерживаемый форк с той же лицензией MIT. Требует Python ≥3.9 и numpy/scipy."
+    published: true
+    runtime_integration: "none — код не подключён к пользовательскому runtime"
+    status:
+      availability: reachable
+      download: downloaded
+      run: not_executed
+      item_qa: schema_validated
+      rights: permissive
+    competencies: [immediate_mastery]
+    domains: [meta]
+    item_count: 16
+    item_files:
+      - path: sources/py-irt/items/modules.jsonl
+        rows: 16
+        bytes: 7440
+        sha256: d72f2c41a9c36a0acdf83d4615db8cb575b37fd6fda71107500cdac149584f71
+  - id: pyedmine
+    title: "pyedmine — алгоритмы отслеживания усвоения и когнитивной диагностики"
+    url: "https://github.com/ZhijieXiong/pyedmine"
+    license: "MIT"
+    license_url: "https://github.com/ZhijieXiong/pyedmine/blob/main/LICENSE"
+    redistribution: full
+    fetch: "git clone https://github.com/ZhijieXiong/pyedmine && checkout 20af7967486e833899e589c37ae33ec1b28662d1; см. sources/pyedmine/fetch.py"
+    language: "en"
+    levels: [3, 4, 5, 6, 7]
+    retrieved: '2026-10-20'
+    attribution: "pyedmine contributors, MIT License."
+    upstream_repo: "https://github.com/ZhijieXiong/pyedmine"
+    upstream_commit: "20af7967486e833899e589c37ae33ec1b28662d1"
+    role: "116 модулей: алгоритмы KT и CDM на чистом Python, с примерами и конфигами. Более лёгкая (без torch) альтернатива pyKT для одиночного ученика."
+    limitations: "Состояние и API отличаются от pyKT; выбирать надо одно. Часть модулей требует numpy/pandas."
+    published: true
+    runtime_integration: "none — код не подключён к пользовательскому runtime"
+    status:
+      availability: reachable
+      download: downloaded
+      run: not_executed
+      item_qa: schema_validated
+      rights: permissive
+    competencies: [delayed_retention, error_diagnosis]
+    domains: [meta]
+    item_count: 116
+    item_files:
+      - path: sources/pyedmine/items/models.jsonl
+        rows: 116
+        bytes: 60863
+        sha256: 6cdf40466ae4d652579309b36bf23d7fc6080fc79c6c6716f8b4c91cd1107cf7
+  - id: pykt
+    title: "pyKT — библиотека отслеживания усвоения (knowledge tracing)"
+    url: "https://github.com/pykt-team/pykt-toolkit"
+    license: "MIT"
+    license_url: "https://github.com/pykt-team/pykt-toolkit/blob/main/LICENSE"
+    redistribution: full
+    fetch: "git clone https://github.com/pykt-team/pykt-toolkit && checkout ccbaf37b07e3e7ff7b2415475b2faacb967d54ea; см. sources/pykt/fetch.py"
+    language: "en"
+    levels: [3, 4, 5, 6, 7]
+    retrieved: '2026-10-20'
+    attribution: "pyKT toolkit contributors, MIT License."
+    upstream_repo: "https://github.com/pykt-team/pykt-toolkit"
+    upstream_commit: "ccbaf37b07e3e7ff7b2415475b2faacb967d54ea"
+    role: "94 модуля моделей отслеживания усвоения (DKT, AKT, SAKT, SAINT, …) с готовыми форматами данных. Отвечает на вопрос «что ученик уже умеет, а что ещё нет» по истории ответов."
+    limitations: "Глубокое обучение, тяжёлые зависимости (torch), формат данных — собственный (skill/question id). Для одного ученика избыточно; в MATH_PRO своё состояние в `mathpro/progress/store.py`."
+    published: true
+    runtime_integration: "none — код не подключён к пользовательскому runtime"
+    status:
+      availability: reachable
+      download: downloaded
+      run: not_executed
+      item_qa: schema_validated
+      rights: permissive
+    competencies: [delayed_retention, immediate_mastery]
+    domains: [meta]
+    item_count: 94
+    item_files:
+      - path: sources/pykt/items/models.jsonl
+        rows: 94
+        bytes: 52555
+        sha256: 62f9af2f5dd5bbfb94712e98365fcb7178c9c05e86c66fe3249c18c35926b2c5
+  - id: pypsy
+    title: "pypsy — психометрика: IRT, MIRT, CFA, CTT, GRM, DINA"
+    url: "https://github.com/inuyasha2012/pypsy"
+    license: "MIT"
+    license_url: "https://github.com/inuyasha2012/pypsy/blob/master/LICENSE"
+    redistribution: full
+    fetch: "git clone https://github.com/inuyasha2012/pypsy && checkout f055fe1f4901b654d99d9a776152e8192e014f5f; см. sources/pypsy/fetch.py"
+    language: "en"
+    levels: [3, 4, 5, 6, 7]
+    retrieved: '2026-10-20'
+    attribution: "pypsy contributors, MIT License."
+    upstream_repo: "https://github.com/inuyasha2012/pypsy"
+    upstream_commit: "f055fe1f4901b654d99d9a776152e8192e014f5f"
+    role: "18 модулей плюс 10 демо-скриптов (irt, mirt, cfa, ctt, grm, dina, mcmc_dina). Позволяет проверить на собственных данных, что адаптивная выдача не хуже фиксированной — до того, как внедрять адаптивность."
+    limitations: "Старый API, последний коммит — 2020 год. Для воспроизводимости в тестах лучше py-irt; pypsy полезен как эталон и как демо."
+    published: true
+    runtime_integration: "none — код не подключён к пользовательскому runtime"
+    status:
+      availability: reachable
+      download: downloaded
+      run: not_executed
+      item_qa: schema_validated
+      rights: permissive
+    competencies: [immediate_mastery]
+    domains: [meta]
+    item_count: 18
+    item_files:
+      - path: sources/pypsy/items/models.jsonl
+        rows: 18
+        bytes: 7865
+        sha256: f377f9cf451c3221613bb07703bc696f095b1b475171df8f7a780a518a3ebfe7
+  - id: sympy-books
+    title: "sympy-books — учебники по математике с решениями на SymPy"
+    url: "https://github.com/dariober/sympy-books"
+    license: "MIT"
+    license_url: "https://github.com/dariober/sympy-books/blob/master/LICENSE"
+    redistribution: full
+    fetch: "git clone https://github.com/dariober/sympy-books && checkout ca1e9d37385a949f77247642e244d34e9a1117d5; см. sources/sympy-books/fetch.py"
+    language: "en"
+    levels: [4, 5, 6]
+    retrieved: '2026-10-20'
+    attribution: "sympy-books by Diego. Alvarez, MIT License."
+    upstream_repo: "https://github.com/dariober/sympy-books"
+    upstream_commit: "ca1e9d37385a949f77247642e244d34e9a1117d5"
+    role: "Мост «математика → Python»: 8 разделов из книг по R, доверительным интервалам, линейной алгебре и оптимизации, с кодом SymPy рядом с теорией."
+    limitations: "Всего 8 разделов — это демонстрация подхода, а не полноценный курс. Репозиторий не обновлялся с 2020 года. Английский, R и SymPy."
+    published: true
+    runtime_integration: "none — учебники не подключены к пользовательскому runtime и не сопоставлены с topic_id"
+    status:
+      availability: reachable
+      download: downloaded
+      run: not_executed
+      item_qa: schema_validated
+      rights: permissive
+    competencies: [immediate_mastery, transfer]
+    domains: [python, probability, linear-algebra]
+    item_count: 8
+    item_files:
+      - path: sources/sympy-books/items/chapters.jsonl
+        rows: 8
+        bytes: 8136
+        sha256: 5072520711e463580021a24dd4bdc71675132a8407029b07d3ac488a284a550d
+  - id: thealgorithms-python
+    title: "TheAlgorithms/Python — 1 287 реализаций алгоритмов"
+    url: "https://github.com/TheAlgorithms/Python"
+    license: "MIT"
+    license_url: "https://github.com/TheAlgorithms/Python/blob/master/LICENSE.md"
+    redistribution: full
+    fetch: "git clone https://github.com/TheAlgorithms/Python && checkout 6e03a48579ca212a08b36be00378f887dc41a003; см. sources/thealgorithms-python/fetch.py"
+    language: "en"
+    levels: [3, 4, 5, 6]
+    retrieved: '2026-10-20'
+    attribution: "TheAlgorithms/Python contributors, MIT License."
+    upstream_repo: "https://github.com/TheAlgorithms/Python"
+    upstream_commit: "6e03a48579ca212a08b36be00378f887dc41a003"
+    role: "Карта вычислительных приёмов на Python: арифметика, комбинаторика, теория чисел, геометрия, сортировки, графы, динамика. У каждой записи — docstring и список функций, то есть быстрый поиск «какая функция решает класс задач»."
+    limitations: "Это справочник, а не курс: нет объяснений, нет задач для ученика, часть кода — для иллюстрации, а не для продакшна. Английский."
+    published: true
+    runtime_integration: "none — алгоритмы не подключены к пользовательскому runtime и не сопоставлены с topic_id"
+    status:
+      availability: reachable
+      download: downloaded
+      run: not_executed
+      item_qa: schema_validated
+      rights: permissive
+    competencies: [immediate_mastery, transfer]
+    domains: [python, discrete, number-theory]
+    item_count: 1287
+    item_files:
+      - path: sources/thealgorithms-python/items/algorithms.jsonl
+        rows: 1287
+        bytes: 723973
+        sha256: 639fc08f7f46c12b0c70ad32bd4ba3b05d6fedd850ce4e642250a66caffe26bd
+  - id: treecut-math
+    title: "TreeCut — текстовые задачи, в том числе нерешаемые"
+    url: "https://github.com/j-bagel/treecut-math"
+    license: "Apache-2.0"
+    license_url: "https://github.com/j-bagel/treecut-math/blob/main/LICENSE"
+    redistribution: full
+    fetch: "git clone https://github.com/j-bagel/treecut-math && checkout b48f3de5586d00fffaf3ae2392c6d16497b664ea; см. sources/treecut-math/fetch.py"
+    language: "en"
+    levels: [3, 4]
+    retrieved: '2026-10-20'
+    attribution: "TreeCut (Jialin Ouyang et al.), Apache-2.0."
+    upstream_repo: "https://github.com/j-bagel/treecut-math"
+    upstream_commit: "b48f3de5586d00fffaf3ae2392c6d16497b664ea"
+    role: "4 000 задач (2 000 решаемых / 2 000 нерешаемых). Нерешаемая версия получается вырезанием необходимого условия. Проверка на «задача не имеет ответа» — обязательный блок Error diagnosis: агент не должен домысливать ответ."
+    limitations: "Только простые арифметико-алгебраические сюжеты (рестораны, товары). Полный набор (~21 000) лежит на Hugging Face и в этом репозитории его нет."
+    published: true
+    runtime_integration: "none — задачи не подключены к пользовательскому runtime и не сопоставлены с topic_id"
+    status:
+      availability: reachable
+      download: downloaded
+      run: not_executed
+      item_qa: schema_validated
+      rights: permissive
+    competencies: [error_diagnosis, transfer]
+    domains: [arithmetic, algebra]
+    item_count: 4000
+    item_files:
+      - path: sources/treecut-math/items/treecut.jsonl
+        rows: 4000
+        bytes: 7226348
+        sha256: 0825457472ee321270d6404af31b1c138994f9bca54c6560973c046eeb3264d2
+  - id: ultimate-aptitude
+    title: "Ultimate Aptitude — банк вопросов способностей (CC BY 4.0)"
+    url: "https://github.com/atmamoon/ultimate-aptitude"
+    license: "CC-BY-4.0"
+    license_url: "https://github.com/atmamoon/ultimate-aptitude/blob/main/banks/LICENSE.md"
+    redistribution: full
+    fetch: "git clone https://github.com/atmamoon/ultimate-aptitude && checkout 62437a1fc428bec8349aaa982ef1e29fa6ee1e8c; см. sources/ultimate-aptitude/fetch.py"
+    language: "en"
+    levels: [4, 5, 6]
+    retrieved: '2026-10-20'
+    attribution: "Questions from Ultimate Aptitude by Mamoon Mondal, licensed under CC BY 4.0."
+    upstream_repo: "https://github.com/atmamoon/ultimate-aptitude"
+    upstream_commit: "62437a1fc428bec8349aaa982ef1e29fa6ee1e8c"
+    role: "1 098 авторских вопросов с разбором: квант, логика, достаточность данных, анализ данных, вербальные. Измеряет способности и устойчивость к уловкам формата, а не знание предмета — отдельный контур от «знаниевой» диагностики."
+    limitations: "Смещение сложности: 572 «hard» и 522 «very-hard», «medium» всего 4 — входная диагностика на этом банке невозможна, нужен другой источник. Тексты — в стиле GMAT/CAT, но не из официальных экзаменов. Ещё 1 000+ procedural-вопросов генерируются кодом `js/generators.js` — код не копировался."
+    published: true
+    runtime_integration: "none — банк не подключён к пользовательскому runtime и не сопоставлен с topic_id"
+    status:
+      availability: reachable
+      download: downloaded
+      run: not_executed
+      item_qa: schema_validated
+      rights: permissive
+    competencies: [immediate_mastery, transfer]
+    domains: [arithmetic, algebra, probability, reasoning, nonstandard]
+    item_count: 1098
+    overlay_ids: [ultimate-aptitude-quality]
+    item_files:
+      - path: sources/ultimate-aptitude/items/questions.jsonl
+        rows: 1098
+        bytes: 1792883
+        sha256: 4766b8386da55031fc357bb04d06fcdbf1aac8b8dd9db9e2344641e3079d10af

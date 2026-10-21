@@ -1,0 +1,74 @@
+{
+  "_comment": "Предпросмотр метаданных: 10 первых позиций индекса MATH-500-Russian. Источник фактов — MIT-датасет openai/prm800k (prm800k/math_splits/test.jsonl), коммит 7ecc794703b2877f63226f2477a49b34f9b25163, тестовый сплит. Тексты задач, ответы и решения НЕ сохраняются: права на русский перевод не подтверждены. Удаление или изменение этого файла допустимо только вместе с решением мейнтейнера о правах на перевод.",
+  "provenance": {
+    "metadata_source": "openai/prm800k",
+    "metadata_source_commit": "7ecc794703b2877f63226f2477a49b34f9b25163",
+    "metadata_path": "prm800k/math_splits/test.jsonl",
+    "metadata_license": "MIT",
+    "indexed_dataset": "evilfreelancer/MATH-500-Russian",
+    "indexed_dataset_revision": "bf0c9320c19aba3ee331d84fd206804836213730",
+    "indexed_dataset_license": "не указана в карточке датасета"
+  },
+  "records": [
+    {
+      "position": 0,
+      "unique_id": "test/precalculus/807.json",
+      "subject": "Precalculus",
+      "level": 2
+    },
+    {
+      "position": 1,
+      "unique_id": "test/intermediate_algebra/1994.json",
+      "subject": "Intermediate Algebra",
+      "level": 5
+    },
+    {
+      "position": 2,
+      "unique_id": "test/algebra/2584.json",
+      "subject": "Algebra",
+      "level": 3
+    },
+    {
+      "position": 3,
+      "unique_id": "test/number_theory/572.json",
+      "subject": "Number Theory",
+      "level": 3
+    },
+    {
+      "position": 4,
+      "unique_id": "test/algebra/1349.json",
+      "subject": "Algebra",
+      "level": 2
+    },
+    {
+      "position": 5,
+      "unique_id": "test/prealgebra/1622.json",
+      "subject": "Prealgebra",
+      "level": 2
+    },
+    {
+      "position": 6,
+      "unique_id": "test/number_theory/515.json",
+      "subject": "Number Theory",
+      "level": 3
+    },
+    {
+      "position": 7,
+      "unique_id": "test/precalculus/927.json",
+      "subject": "Precalculus",
+      "level": 4
+    },
+    {
+      "position": 8,
+      "unique_id": "test/algebra/2036.json",
+      "subject": "Algebra",
+      "level": 3
+    },
+    {
+      "position": 9,
+      "unique_id": "test/prealgebra/1139.json",
+      "subject": "Prealgebra",
+      "level": 5
+    }
+  ]
+}

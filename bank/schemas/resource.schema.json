@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/A1S2D3TheName/MATH_PRO/math_repo_education/schemas/resource.schema.json",
+  "title": "Паспорт источника (SOURCE.yaml) и запись каталога",
+  "description": "Одна запись каталога ресурсов. Файлы sources/<id>/SOURCE.yaml и catalog/catalog.json используют одни и те же поля; в каталоге добавлены счётчики и хеши.",
+  "type": "object",
+  "required": ["id", "title", "url", "license", "license_url", "redistribution", "fetch", "language", "levels", "retrieved", "attribution", "status"],
+  "$defs": {
+    "status": {
+      "type": "object",
+      "description": "Машинные статусы ресурса. Ставятся по фактически выполненным операциям, а не по предположению.",
+      "required": ["availability", "download", "run", "item_qa", "rights"],
+      "properties": {
+        "availability": {
+          "type": "string",
+          "enum": ["reachable", "blocked_rights", "unreachable"],
+          "description": "reachable — источник отвечает; blocked_rights — публикация запрещена лицензией; unreachable — адрес не отвечает."
+        },
+        "download": {
+          "type": "string",
+          "enum": ["downloaded", "metadata_only", "not_downloaded"],
+          "description": "downloaded — содержимое получено; metadata_only — получено только оглавление; not_downloaded — ничего не получено."
+        },
+        "run": {
+          "type": "string",
+          "enum": ["not_executed", "executed"],
+          "description": "Запускалось ли приложение/код источника. Для всех ресурсов этой папки — not_executed."
+        },
+        "item_qa": {
+          "type": "string",
+          "enum": ["schema_validated", "not_audited", "audited"],
+          "description": "schema_validated — строки прошли валидацию по item.schema.json; not_audited — содержимое не проверялось построчно."
+        },
+        "rights": {
+          "type": "string",
+          "enum": ["permissive", "restricted", "unclear"],
+          "description": "permissive — лицензия разрешает перепубликацию; restricted — прямо запрещает; unclear — лицензия не указана или права неясны."
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "description": "Идентификатор источника; совпадает с папкой sources/<id>."
+    },
+    "title": {"type": "string", "minLength": 1},
+    "url": {"type": "string", "minLength": 1},
+    "license": {"type": "string", "minLength": 1, "description": "SPDX-идентификатор либо честная формулировка «не указана» / «All rights reserved»."},
+    "license_url": {"type": "string", "minLength": 1},
+    "redistribution": {
+      "type": "string",
+      "enum": ["full", "index-only"],
+      "description": "full — тексты можно перепубликовывать; index-only — в репозиторий попадает только оглавление."
+    },
+    "fetch": {"type": "string", "minLength": 1, "description": "Воспроизводимая команда получения. Для заблокированного источника — описание отсутствия загрузчика."},
+    "language": {"type": "string", "minLength": 2},
+    "levels": {
+      "type": "array",
+      "items": {"type": "integer", "minimum": 1, "maximum": 7},
+      "description": "Ступени MATH_PRO (tree.yaml), которые покрывает источник."
+    },
+    "retrieved": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+    "attribution": {"type": "string", "minLength": 1},
+    "upstream_repo": {"type": "string"},
+    "upstream_commit": {"type": "string"},
+    "role": {"type": "string", "description": "Место источника в учебной системе."},
+    "limitations": {"type": "string", "description": "Ограничения, риски, чего в источнике нет."},
+    "published": {
+      "type": "boolean",
+      "description": "Опубликованы ли данные источника в репозитории. false — источник заблокирован или публикуется только оглавление без единиц."
+    },
+    "runtime_integration": {
+      "type": "string",
+      "description": "Сопоставление с topic_id и подключение к пользовательскому runtime. «none» — не сопоставлено и не подключено."
+    },
+    "status": {"$ref": "#/$defs/status"},
+    "license_gate": {
+      "type": "object",
+      "description": "Обязательный лицензионный gate, если источник заблокирован или публикуется частично.",
+      "required": ["state", "reason"],
+      "properties": {
+        "state": {"type": "string"},
+        "reason": {"type": "string"},
+        "removed": {"type": "string"},
+        "removed_content_note": {"type": "string"},
+        "to_change": {"type": "string"},
+        "review": {"type": "string"}
+      }
+    },
+    "index": {
+      "type": "object",
+      "description": "Состав индекса для источников, публикуемых только указателем.",
+      "properties": {
+        "total_positions": {"type": "integer", "minimum": 0},
+        "preview_records": {"type": "integer", "minimum": 0},
+        "positional_records": {"type": "integer", "minimum": 0},
+        "contains_task_text": {"type": "boolean"},
+        "contains_answers": {"type": "boolean"},
+        "contains_solutions": {"type": "boolean"},
+        "preview_file": {"type": "string"},
+        "preview_provenance": {"type": "string"}
+      }
+    },
+    "competencies": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Измерения, к которым источник причастен: immediate_mastery, delayed_retention, transfer, error_diagnosis, independence, плюс предметные домены."
+    },
+    "domains": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Предметные домены: arithmetic, algebra, geometry, analysis, discrete, logic, proofs, nonstandard, python, reasoning, memory, speed."
+    },
+    "item_count": {"type": "integer", "minimum": 0},
+    "item_files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {"type": "string"},
+          "rows": {"type": "integer"},
+          "bytes": {"type": "integer"},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        },
+        "required": ["path", "rows", "bytes", "sha256"]
+      }
+    },
+    "overlay_ids": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Идентификаторы overlay-файлов качества, относящихся к источнику."
+    }
+  },
+  "additionalProperties": true
+}

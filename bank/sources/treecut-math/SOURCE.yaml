@@ -1,0 +1,25 @@
+---
+id: "treecut-math"
+title: "TreeCut — текстовые задачи, в том числе нерешаемые"
+url: "https://github.com/j-bagel/treecut-math"
+license: "Apache-2.0"
+license_url: "https://github.com/j-bagel/treecut-math/blob/main/LICENSE"
+redistribution: "full"
+fetch: "git clone https://github.com/j-bagel/treecut-math && checkout b48f3de5586d00fffaf3ae2392c6d16497b664ea; см. sources/treecut-math/fetch.py"
+language: "en"
+levels: [3, 4]
+retrieved: "2026-10-20"
+attribution: "TreeCut (Jialin Ouyang et al.), Apache-2.0."
+upstream_repo: "https://github.com/j-bagel/treecut-math"
+upstream_commit: "b48f3de5586d00fffaf3ae2392c6d16497b664ea"
+role: "4 000 задач (2 000 решаемых / 2 000 нерешаемых). Нерешаемая версия получается вырезанием необходимого условия. Проверка на «задача не имеет ответа» — обязательный блок Error diagnosis: агент не должен домысливать ответ."
+limitations: "Только простые арифметико-алгебраические сюжеты (рестораны, товары). Полный набор (~21 000) лежит на Hugging Face и в этом репозитории его нет."
+published: true
+runtime_integration: none — задачи не подключены к пользовательскому runtime и не
+  сопоставлены с topic_id
+status:
+  availability: reachable
+  download: downloaded
+  run: not_executed
+  item_qa: schema_validated
+  rights: permissive

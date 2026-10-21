@@ -1,0 +1,25 @@
+---
+id: "educdm"
+title: "EduCDM — зоопарк моделей когнитивной диагностики"
+url: "https://github.com/bigdata-ustc/EduCDM"
+license: "Apache-2.0"
+license_url: "https://github.com/bigdata-ustc/EduCDM/blob/main/LICENSE"
+redistribution: "full"
+fetch: "git clone https://github.com/bigdata-ustc/EduCDM && checkout c610e6ae7f45cfe8f1106a1c342d4ef5a357472e; см. sources/educdm/fetch.py"
+language: "en"
+levels: [3, 4, 5, 6, 7]
+retrieved: "2026-10-20"
+attribution: "EduCDM (Zhou et al.), Apache-2.0."
+upstream_repo: "https://github.com/bigdata-ustc/EduCDM"
+upstream_commit: "c610e6ae7f45cfe8f1106a1c342d4ef5a357472e"
+role: "31 модуль моделей когнитивной диагностики (DINA, DINO, MIRT, IRT, PCM, …) — готовые алгоритмы, чтобы оценивать не «сколько баллов», а «какие компетенции освоены». Инструмент для диагностики по компетенциям."
+limitations: "Требует PyTorch и своих форматов данных; в MATH_PRO подход «ошибка → компетенция» реализован через `errors/catalog.yaml`, а не через CDM. Это опора и обоснование, а не готовый модуль."
+published: true
+runtime_integration: none — код и документация EduCDM не подключены к пользовательскому
+  runtime; используются как обоснование метода диагностики
+status:
+  availability: reachable
+  download: downloaded
+  run: not_executed
+  item_qa: schema_validated
+  rights: permissive

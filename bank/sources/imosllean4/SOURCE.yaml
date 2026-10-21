@@ -1,0 +1,25 @@
+---
+id: "imosllean4"
+title: "IMOSLLean4 — шортлист ММО с разбором и формализацией Lean 4"
+url: "https://github.com/mortarsanjaya/IMOSLLean4"
+license: "Apache-2.0"
+license_url: "https://github.com/mortarsanjaya/IMOSLLean4/blob/main/LICENSE"
+redistribution: "full"
+fetch: "git clone https://github.com/mortarsanjaya/IMOSLLean4 && checkout 883b0326e585ac9a2148e5d67a4c335bb4f798be; см. sources/imosllean4/fetch.py"
+language: "en"
+levels: [7]
+retrieved: "2026-10-20"
+attribution: "IMOSLLean4 (Alireza Shokrollahi et al.), Apache-2.0."
+upstream_repo: "https://github.com/mortarsanjaya/IMOSLLean4"
+upstream_commit: "883b0326e585ac9a2148e5d67a4c335bb4f798be"
+role: "72 задачи шортлиста ММО (2006–2024) с условием, ответом и разбором. Верхняя граница сложности: годится для проверки прочности и переноса, но не для входной диагностики."
+limitations: "Только английский, только IMO-уровень. Задачи 2006–2024, не весь шортлист. Формализация Lean 4 требует отдельного toolchain."
+published: true
+runtime_integration: none — задачи не подключены к пользовательскому runtime и не
+  сопоставлены с topic_id
+status:
+  availability: reachable
+  download: downloaded
+  run: not_executed
+  item_qa: schema_validated
+  rights: permissive

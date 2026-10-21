@@ -1,0 +1,25 @@
+---
+id: "math-prm800k"
+title: "MATH (12 500 задач) и PRM800K — пошаговые метки, нормализатор ответов"
+url: "https://github.com/openai/prm800k"
+license: "MIT"
+license_url: "https://github.com/openai/prm800k/blob/main/LICENSE"
+redistribution: "full"
+fetch: "git clone https://github.com/openai/prm800k && checkout 7ecc794703b2877f63226f2477a49b34f9b25163; см. sources/math-prm800k/fetch.py"
+language: "en"
+levels: [3, 4, 5, 6, 7]
+retrieved: "2026-10-20"
+attribution: "MATH dataset (Dan Hendrycks et al.) и PRM800K (OpenAI), MIT License."
+upstream_repo: "https://github.com/openai/prm800k"
+upstream_commit: "7ecc794703b2877f63226f2477a49b34f9b25163"
+role: "Ядро банка задач: 12 500 задач с ответами и решениями, уровни 1–5 по предметам, пошаговые метки человеческих и модельных решений, нормализатор ответов для автопроверки. Основа для Immediate mastery, Transfer и Error diagnosis."
+limitations: "Задачи на английском. MATH — соревновательные задачи (AMC/AIME-уровень и выше), начальный уровень (арифметика, дроби) покрыт слабо: для ступеней 1–2 нужны другие источники. train-сплит PRM800K (456 МБ) не включён — разметка шагов приведена только для test."
+published: true
+runtime_integration: none — банк не подключён к пользовательскому runtime и не сопоставлен
+  с topic_id
+status:
+  availability: reachable
+  download: downloaded
+  run: not_executed
+  item_qa: schema_validated
+  rights: permissive

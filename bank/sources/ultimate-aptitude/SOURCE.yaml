@@ -1,0 +1,25 @@
+---
+id: "ultimate-aptitude"
+title: "Ultimate Aptitude — банк вопросов способностей (CC BY 4.0)"
+url: "https://github.com/atmamoon/ultimate-aptitude"
+license: "CC-BY-4.0"
+license_url: "https://github.com/atmamoon/ultimate-aptitude/blob/main/banks/LICENSE.md"
+redistribution: "full"
+fetch: "git clone https://github.com/atmamoon/ultimate-aptitude && checkout 62437a1fc428bec8349aaa982ef1e29fa6ee1e8c; см. sources/ultimate-aptitude/fetch.py"
+language: "en"
+levels: [4, 5, 6]
+retrieved: "2026-10-20"
+attribution: "Questions from Ultimate Aptitude by Mamoon Mondal, licensed under CC BY 4.0."
+upstream_repo: "https://github.com/atmamoon/ultimate-aptitude"
+upstream_commit: "62437a1fc428bec8349aaa982ef1e29fa6ee1e8c"
+role: "1 098 авторских вопросов с разбором: квант, логика, достаточность данных, анализ данных, вербальные. Измеряет способности и устойчивость к уловкам формата, а не знание предмета — отдельный контур от «знаниевой» диагностики."
+limitations: "Смещение сложности: 572 «hard» и 522 «very-hard», «medium» всего 4 — входная диагностика на этом банке невозможна, нужен другой источник. Тексты — в стиле GMAT/CAT, но не из официальных экзаменов. Ещё 1 000+ procedural-вопросов генерируются кодом `js/generators.js` — код не копировался."
+published: true
+runtime_integration: none — банк не подключён к пользовательскому runtime и не сопоставлен
+  с topic_id
+status:
+  availability: reachable
+  download: downloaded
+  run: not_executed
+  item_qa: schema_validated
+  rights: permissive

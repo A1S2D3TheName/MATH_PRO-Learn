@@ -1,0 +1,25 @@
+---
+id: "sympy-books"
+title: "sympy-books — учебники по математике с решениями на SymPy"
+url: "https://github.com/dariober/sympy-books"
+license: "MIT"
+license_url: "https://github.com/dariober/sympy-books/blob/master/LICENSE"
+redistribution: "full"
+fetch: "git clone https://github.com/dariober/sympy-books && checkout ca1e9d37385a949f77247642e244d34e9a1117d5; см. sources/sympy-books/fetch.py"
+language: "en"
+levels: [4, 5, 6]
+retrieved: "2026-10-20"
+attribution: "sympy-books by Diego. Alvarez, MIT License."
+upstream_repo: "https://github.com/dariober/sympy-books"
+upstream_commit: "ca1e9d37385a949f77247642e244d34e9a1117d5"
+role: "Мост «математика → Python»: 8 разделов из книг по R, доверительным интервалам, линейной алгебре и оптимизации, с кодом SymPy рядом с теорией."
+limitations: "Всего 8 разделов — это демонстрация подхода, а не полноценный курс. Репозиторий не обновлялся с 2020 года. Английский, R и SymPy."
+published: true
+runtime_integration: none — учебники не подключены к пользовательскому runtime и не
+  сопоставлены с topic_id
+status:
+  availability: reachable
+  download: downloaded
+  run: not_executed
+  item_qa: schema_validated
+  rights: permissive

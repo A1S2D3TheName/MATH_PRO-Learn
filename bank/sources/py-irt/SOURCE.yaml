@@ -1,0 +1,24 @@
+---
+id: "py-irt"
+title: "py-irt — оценивание параметров IRT и многомерного IRT"
+url: "https://github.com/nd-ball/py-irt"
+license: "MIT"
+license_url: "https://github.com/nd-ball/py-irt/blob/master/LICENSE"
+redistribution: "full"
+fetch: "git clone https://github.com/nd-ball/py-irt && checkout 6514928ec753771c8858bf16581e9715d6025ed9; см. sources/py-irt/fetch.py"
+language: "en"
+levels: [3, 4, 5, 6, 7]
+retrieved: "2026-10-20"
+attribution: "py-irt contributors (форк nd-ball/py-irt), MIT License."
+upstream_repo: "https://github.com/nd-ball/py-irt"
+upstream_commit: "6514928ec753771c8858bf16581e9715d6025ed9"
+role: "16 модулей: 1PL/2PL/3PL IRT, многомерный MIRT, обработка anchor-вопросов, экспорт для CAT. Техническая опора для адаптивного тестирования."
+limitations: "Оригинальный `ets/py-irt` в этом окружении недоступен (404); взят поддерживаемый форк с той же лицензией MIT. Требует Python ≥3.9 и numpy/scipy."
+published: true
+runtime_integration: none — код не подключён к пользовательскому runtime
+status:
+  availability: reachable
+  download: downloaded
+  run: not_executed
+  item_qa: schema_validated
+  rights: permissive

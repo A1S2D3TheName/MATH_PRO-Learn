@@ -1,0 +1,25 @@
+---
+id: "fsrs4anki"
+title: "FSRS4Anki — планировщик повторения на модели DSR"
+url: "https://github.com/open-spaced-repetition/fsrs4anki"
+license: "MIT"
+license_url: "https://github.com/open-spaced-repetition/fsrs4anki/blob/main/LICENSE"
+redistribution: "full"
+fetch: "git clone https://github.com/open-spaced-repetition/fsrs4anki && checkout ff7c85cee735472d1c9cec0b9252d184087f74d8; см. sources/fsrs4anki/fetch.py"
+language: "en"
+levels: [3, 4, 5, 6, 7]
+retrieved: "2026-10-20"
+attribution: "FSRS4Anki contributors, MIT License."
+upstream_repo: "https://github.com/open-spaced-repetition/fsrs4anki"
+upstream_commit: "ff7c85cee735472d1c9cec0b9252d184087f74d8"
+role: "Готовый планировщик отложенного повторения (delayed retention): 50 разделов документации и 40 экспериментальных ноутбуков с выводами по забыванию, сложности и стабильности памяти."
+limitations: "Код — TypeScript/JavaScript, а не Python; в MATH_PRO планировщик написан свой (`mathpro/progress/scheduler.py`) — заимствовать модель, не код. Ноутбуки требуют Jupyter."
+published: true
+runtime_integration: none — планировщик не подключён к пользовательскому runtime (в
+  MATH_PRO используется собственная реализация mathpro/progress/scheduler.py)
+status:
+  availability: reachable
+  download: downloaded
+  run: not_executed
+  item_qa: schema_validated
+  rights: permissive

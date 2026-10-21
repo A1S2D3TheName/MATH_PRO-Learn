@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/A1S2D3TheName/MATH_PRO/math_repo_education/schemas/item.schema.json",
+  "title": "Единица учебного материала",
+  "description": "Одна строка items/*.jsonl любого источника из math_repo_education. Схема описывает общий каркас; поля, специфичные для источника, живут рядом и не запрещаются (additionalProperties: true).",
+  "type": "object",
+  "required": [
+    "id",
+    "kind",
+    "title",
+    "url",
+    "path",
+    "lang",
+    "source_id"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Идентификатор, уникальный внутри источника. Для пары «источник + id» — уникален глобально."
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "course",
+        "book",
+        "chapter",
+        "lesson",
+        "section",
+        "example",
+        "exercise",
+        "problem",
+        "solution",
+        "glossary",
+        "item",
+        "reference"
+      ],
+      "description": "Тип единицы. problem — задача с условием; exercise — упражнение с вариантами или без них; lesson/section — учебный текст; solution — разбор; reference — описание инструмента или модуля."
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "url": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Ссылка на единицу в исходнике."
+    },
+    "path": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "description": "Иерархия: источник → раздел → подраздел. Первый элемент — имя источника."
+    },
+    "level": {
+      "description": "Уровень сложности в терминах источника: число (MATH: 1–5), строка (easy/medium/hard) или список.",
+      "type": [
+        "number",
+        "string",
+        "array",
+        "null"
+      ]
+    },
+    "text": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Условие или текст. В index-only источниках — null."
+    },
+    "answer": {
+      "type": [
+        "string",
+        "number",
+        "null"
+      ]
+    },
+    "solution": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "lang": {
+      "type": "string",
+      "minLength": 2,
+      "description": "Код языка: en, ru."
+    },
+    "source_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "id источника (совпадает с папкой sources/<id>)."
+    },
+    "metadata_only": {
+      "type": "boolean",
+      "description": "true — запись является только указателем (оглавлением): текста условия в ней нет. Такие записи по умолчанию не показываются в поиске."
+    },
+    "steps": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Пошаговая разметка решения (PRM800K): список шагов с меткой верности.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "text": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "label": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "Метка верности шага: 1 — верный, 0 — ошибочный, -1 — нерелевантный (PRM800K)."
+          },
+          "completeness": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "candidates": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "rating": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "flagged": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "unique_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Ключ строки в исходном датасете. Для math-500-ru — ключ соединения с русским датасетом."
+    }
+  },
+  "additionalProperties": true
+}

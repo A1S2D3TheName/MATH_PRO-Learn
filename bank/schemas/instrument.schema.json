@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/A1S2D3TheName/MATH_PRO/math_repo_education/schemas/instrument.schema.json",
+  "title": "Диагностический инструмент (будущая система)",
+  "description": "Описание диагностической процедуры. Схема описывает формат, а не содержимое: конкретные инструменты собирает будущий агент, этот файл задаёт рамку, чтобы их можно было проверить и сопоставить.",
+  "type": "object",
+  "required": ["id", "stage", "competency", "procedure", "items", "scoring"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "stage": {
+      "type": "string",
+      "enum": ["entry", "teaching", "delayed", "transfer", "self-diagnosis", "exit"],
+      "description": "Этап учебного цикла."
+    },
+    "competency": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "enum": ["immediate_mastery", "delayed_retention", "transfer", "error_diagnosis", "independence"]},
+      "description": "Какие измерения даёт инструмент. Инструмент может давать больше одного измерения, но каждое — отдельно."
+    },
+    "domains": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Предметные домены, которые инструмент покрывает."
+    },
+    "procedure": {
+      "type": "object",
+      "required": ["steps", "constraints"],
+      "properties": {
+        "steps": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "constraints": {
+          "type": "object",
+          "properties": {
+            "max_hints": {"type": ["integer", "null"]},
+            "time_limit_min": {"type": ["number", "null"]},
+            "adaptive": {"type": "boolean"},
+            "may_retry": {"type": "boolean"},
+            "no_ai_help": {"type": "boolean"},
+            "feedback_policy": {"type": "string"}
+          }
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "description": "Ссылки на единицы из sources/: source_id + item id. Содержимое задач не дублируется.",
+      "items": {
+        "type": "object",
+        "required": ["source_id", "item_id"],
+        "properties": {
+          "source_id": {"type": "string"},
+          "item_id": {"type": "string"},
+          "role": {
+            "type": "string",
+            "enum": ["probe", "anchor", "transfer", "distractor", "ill-posed", "calibration"],
+            "description": "probe — измеряет; anchor — опорный; transfer — перенос; distractor — отвлекающий; ill-posed — задача без ответа; calibration — калибровочный."
+          },
+          "paired_with": {"type": "string", "description": "id парной единицы (для transfer: исходная задача)."}
+        }
+      }
+    },
+    "scoring": {
+      "type": "object",
+      "required": ["rule"],
+      "properties": {
+        "rule": {"type": "string", "minLength": 1},
+        "scale": {"type": "string", "description": "Шкала ответа (например, correct/partial/incorrect или 0..1)."},
+        "thresholds": {"type": "object", "description": "Пороги, помеченные как гипотезы пилота."},
+        "notes": {"type": "string"}
+      }
+    }
+  },
+  "additionalProperties": true
+}

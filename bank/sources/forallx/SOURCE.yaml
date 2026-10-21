@@ -1,0 +1,25 @@
+---
+id: "forallx"
+title: "forallx — учебник логики P. D. Magnus (CC BY 4.0)"
+url: "https://github.com/OpenLogicProject/forallx"
+license: "CC-BY-4.0"
+license_url: "https://github.com/OpenLogicProject/forallx/blob/master/LICENSE.md"
+redistribution: "full"
+fetch: "git clone https://github.com/OpenLogicProject/forallx && checkout b9a872431eb97287fa039103db92a4bf27768b4b; см. sources/forallx/fetch.py"
+language: "en"
+levels: [4, 5, 6]
+retrieved: "2026-10-20"
+attribution: "forallx: Calgary Edition by P. D. Magnus, CC BY 4.0, Open Logic Project."
+upstream_repo: "https://github.com/OpenLogicProject/forallx"
+upstream_commit: "b9a872431eb97287fa039103db92a4bf27768b4b"
+role: "Готовая теория для раздела «логика»: 93 раздела — пропозициональная и предикативная логика, таблицы истинности, семантика, доказательства, естественный язык. Текст приведён в Markdown (LaTeX-команды упрощены)."
+limitations: "Перевод LaTeX в текст грубый: команды вроде `\\begin{}` убраны, математика частично потеряна. Для формул нужен исходный .tex. Упражнения в разборе не выделены — их надо искать по ключу `exercise`."
+published: true
+runtime_integration: none — учебник не подключён к пользовательскому runtime и не
+  сопоставлен с topic_id
+status:
+  availability: reachable
+  download: downloaded
+  run: not_executed
+  item_qa: schema_validated
+  rights: permissive

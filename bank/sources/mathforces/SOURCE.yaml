@@ -1,0 +1,32 @@
+---
+id: "mathforces"
+title: "Mathforces — 275 олимпиадных задач с подсказками и рейтингом MOHS"
+url: "https://github.com/ervin-macic/mathforces"
+license: "не указана (файла лицензии нет; условия ссылаются на AoPS — права третьих лиц)"
+license_url: "https://github.com/ervin-macic/mathforces"
+redistribution: "index-only"
+fetch: "git clone https://github.com/ervin-macic/mathforces && checkout b068b4468c08f083d64e5552860b601bbc08937e; см. sources/mathforces/fetch.py"
+language: "en"
+levels: [5, 6, 7]
+retrieved: "2026-10-20"
+attribution: "Mathforces by ervin-macic; условия — Art of Problem Solving. Тексты не копируются."
+upstream_repo: "https://github.com/ervin-macic/mathforces"
+upstream_commit: "b068b4468c08f083d64e5552860b601bbc08937e"
+role: "Оглавление 275 задач с темой, оценкой сложности по шкале MOHS, числом подсказок и ссылкой на источник. Полезно как карта сложности олимпиадных задач и как образец дизайна подсказок (три ступени: широкая → сильная → почти решение)."
+limitations: "Условия, подсказки и решения не копируются. Задачи взяты с AoPS, поэтому распространять их нельзя. Подсказки в upstream сгенерированы моделью Gemini, то есть требуют вычитки человеком."
+published: true
+runtime_integration: none — оглавление не подключено к пользовательскому runtime и
+  не сопоставлено с topic_id
+status:
+  availability: reachable
+  download: metadata_only
+  run: not_executed
+  item_qa: schema_validated
+  rights: unclear
+index:
+  total_positions: 275
+  preview_records: 0
+  positional_records: 275
+  contains_task_text: false
+  contains_answers: false
+  contains_solutions: false

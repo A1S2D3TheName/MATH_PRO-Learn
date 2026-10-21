@@ -1,0 +1,25 @@
+---
+id: "exercism-python"
+title: "Exercism Python — 163 проверяемых упражнения"
+url: "https://github.com/exercism/python"
+license: "MIT"
+license_url: "https://github.com/exercism/python/blob/main/LICENSE"
+redistribution: "full"
+fetch: "git clone https://github.com/exercism/python && checkout 6105f6d9d3ef66ce3d5c8f529d2882af3d76b706; см. sources/exercism-python/fetch.py"
+language: "en"
+levels: [3, 4, 5, 6]
+retrieved: "2026-10-20"
+attribution: "Exercism Python track, MIT License."
+upstream_repo: "https://github.com/exercism/python"
+upstream_commit: "6105f6d9d3ef66ce3d5c8f529d2882af3d76b706"
+role: "Практика по Python с машинно-проверяемыми тестами: 131 practice-упражнение и 32 concept-упражнения. У каждого — постановка, `tests.toml` с числом проверок и эталонное решение. Готовая система проверки для блока Python."
+limitations: "Тексты и тесты на английском; к каждому упражнению прилагается эталонное решение — его нельзя показывать ученику до попытки."
+published: true
+runtime_integration: none — упражнения не подключены к пользовательскому runtime и
+  не сопоставлены с topic_id
+status:
+  availability: reachable
+  download: downloaded
+  run: not_executed
+  item_qa: schema_validated
+  rights: permissive

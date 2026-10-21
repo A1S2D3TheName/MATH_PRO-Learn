@@ -1,0 +1,94 @@
+{
+  "overlay_version": "1.0",
+  "overlay_id": "ultimate-aptitude-quality",
+  "source_id": "ultimate-aptitude",
+  "created": "2026-10-21",
+  "notice": [
+    "Это локальный overlay качества. Он НЕ является частью пользовательского runtime.",
+    "Он не меняет, не исключает и не правит исходные данные: оригинальные JSON-файлы upstream",
+    "не изменены, их лицензионные байты не тронуты. Overlay только предупреждает будущего",
+    "интегратора о двух записях, которые нельзя молча ставить в учебную выдачу.",
+    "Решение об исключении или о починке принимает мейнтейнер."
+  ],
+  "upstream": {
+    "repository": "https://github.com/atmamoon/ultimate-aptitude",
+    "pinned_revision": "62437a1fc428bec8349aaa982ef1e29fa6ee1e8c",
+    "pinned_revision_type": "git commit SHA",
+    "permalink_template": "https://github.com/atmamoon/ultimate-aptitude/blob/62437a1fc428bec8349aaa982ef1e29fa6ee1e8c/banks/{file}",
+    "question_license": "CC BY 4.0 (banks/LICENSE.md)",
+    "license_notice_sha256": "a876f67d48f070e3776bb8ad0ddd930dfe320a43bd3073220d4909d4c5a86a37",
+    "license_notice_first_line": "# Question Bank License — CC BY 4.0",
+    "upstream_files": {
+      "banks/questions-dilr.json": {
+        "file_sha256": "fd34fcb30cd9c91789cfecb3fc7e84b84e5dc4f74678f7a62705698969c6d83d",
+        "record_count": 91
+      },
+      "banks/questions-logic.json": {
+        "file_sha256": "7826e90026d645d82a3e0df7acd579e8f19d6f93968f98f3cd520d8fbc906252",
+        "record_count": 100
+      }
+    }
+  },
+  "statuses": {
+    "warning": "запись пригодна, но требует внимания при использовании; по умолчанию не исключается",
+    "exclusion": "запись исключается из учебной выдачи до решения мейнтейнера"
+  },
+  "records": [
+    {
+      "id": "ua-dilr-000",
+      "file": "questions-dilr.json",
+      "index": 0,
+      "index_base": 0,
+      "local_item_id": "dilr-1",
+      "content_sha256": "f25a0e0962ded869d4f4d65ee17c7c36a047032ed48df44886b223dd27497cba",
+      "local_item_sha256": "33c20b10db661a77e965b758518de34b5a0fca1025da36d202d18babde83ae2d",
+      "fingerprint_method": {
+        "content_sha256": "sha256 от канонического JSON объекта исходной записи upstream: json.dumps(record, sort_keys=True, ensure_ascii=False, separators=(',',':'))",
+        "local_item_sha256": "sha256 от канонического JSON среза нормализованной записи из sources/ultimate-aptitude/items/questions.jsonl по ключам text, options, correct_index, solution, level, path"
+      },
+      "topic": "lr-arrangements",
+      "difficulty": "hard",
+      "finding": {
+        "summary": "Ответ согласуется с полным перебором, но объяснение неполно.",
+        "verified_answer_correct": true,
+        "verification_method": "независимый полный перебор всех 6! = 720 перестановок с проверкой четырёх условий",
+        "verification_result": "4 допустимых размещения: пары C-D на местах (4,5) — 2 варианта и (5,6) — 2 варианта. Итог 4 совпадает с указанным ответом.",
+        "defect": "В объяснении перечислены только пары C-D (4,5) и (5,6). Пара (1,2) не разобрана: она действительно даёт 0 вариантов (A вынужден сесть на место 6, после чего E и F занимают соседние места 4 и 5, что нарушает условие (iii)), но её отсутствие в разборе делает объяснение неполным — число 4 не выводится из приведённых рассуждений.",
+        "severity": "low",
+        "affects": "объяснение (explanation), не ответ (correct)"
+      },
+      "status": "warning",
+      "usage_restriction": "Не использовать объяснение этой записи как образец разбора: оно демонстрирует пропуск ветви. При включении в учебную выдачу — либо переписать объяснение, либо сопроводить запись заметкой о пропущенной ветви. Исходный JSON не править."
+    },
+    {
+      "id": "ua-logic-000",
+      "file": "questions-logic.json",
+      "index": 0,
+      "index_base": 0,
+      "local_item_id": "logic-1",
+      "content_sha256": "e9f799e4eaf9f020fb54b229fff3e9d1f068ff468b8131857090b9dab75b0b61",
+      "local_item_sha256": "29914b73354857ecedce0d326525011fe29a2fd90f2b7c1c6985cfdd980fddc8",
+      "fingerprint_method": {
+        "content_sha256": "sha256 от канонического JSON объекта исходной записи upstream: json.dumps(record, sort_keys=True, ensure_ascii=False, separators=(',',':'))",
+        "local_item_sha256": "sha256 от канонического JSON среза нормализованной записи из sources/ultimate-aptitude/items/questions.jsonl по ключам text, options, correct_index, solution, level, path"
+      },
+      "topic": "number-series",
+      "difficulty": "very-hard",
+      "finding": {
+        "summary": "Ответ соответствует задуманному правилу, но условие допускает другие продолжения.",
+        "verified_answer_correct": true,
+        "verification_method": "проверка задуманного правила и разбор альтернативных продолжений",
+        "verification_result": "Задуманное правило «удвоить минус один» даёт 2*65-1 = 129 — это указанный ответ, и он же получается по правилу a_n = 2^n + 1. Однако конечный префикс не определяет продолжение однозначно: например, продолжение с a_6 = 133 (изменение последнего шага) или a_6 = 131 тоже согласуется с первыми пятью членами, а вариант «97» — это усечение той же формулы до предыдущего шага.",
+        "defect": "Формулировка задаёт вопрос с неоднозначным условием: правило, по которому выбран ответ, не выводится из данных однозначно. Ответ при этом верен — дефект в постановке, а не в ключе.",
+        "severity": "medium",
+        "affects": "постановка (prompt), не ответ (correct)"
+      },
+      "status": "warning",
+      "usage_restriction": "Не выдавать эту запись как эталон однозначного решения числового ряда: при обучении переносу «найди правило» она показывает, что правило не единственное. Если запись нужна в выдаче — сопроводить её разбором альтернативных продолжений. Исходный JSON не править."
+    }
+  ],
+  "not_verified": [
+    "Независимая проверка происхождения каждого вопроса не проводилась: наличие upstream-уведомления CC BY 4.0 и attribution не означает, что происхождение всех 1098 записей подтверждено.",
+    "Проверены только эти две записи, названные в исходном review. Остальные 1096 записей по качеству не проверялись."
+  ]
+}

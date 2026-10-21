@@ -1,0 +1,25 @@
+---
+id: "thealgorithms-python"
+title: "TheAlgorithms/Python — 1 287 реализаций алгоритмов"
+url: "https://github.com/TheAlgorithms/Python"
+license: "MIT"
+license_url: "https://github.com/TheAlgorithms/Python/blob/master/LICENSE.md"
+redistribution: "full"
+fetch: "git clone https://github.com/TheAlgorithms/Python && checkout 6e03a48579ca212a08b36be00378f887dc41a003; см. sources/thealgorithms-python/fetch.py"
+language: "en"
+levels: [3, 4, 5, 6]
+retrieved: "2026-10-20"
+attribution: "TheAlgorithms/Python contributors, MIT License."
+upstream_repo: "https://github.com/TheAlgorithms/Python"
+upstream_commit: "6e03a48579ca212a08b36be00378f887dc41a003"
+role: "Карта вычислительных приёмов на Python: арифметика, комбинаторика, теория чисел, геометрия, сортировки, графы, динамика. У каждой записи — docstring и список функций, то есть быстрый поиск «какая функция решает класс задач»."
+limitations: "Это справочник, а не курс: нет объяснений, нет задач для ученика, часть кода — для иллюстрации, а не для продакшна. Английский."
+published: true
+runtime_integration: none — алгоритмы не подключены к пользовательскому runtime и
+  не сопоставлены с topic_id
+status:
+  availability: reachable
+  download: downloaded
+  run: not_executed
+  item_qa: schema_validated
+  rights: permissive

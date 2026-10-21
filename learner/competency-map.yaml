@@ -1,0 +1,37 @@
+# Карта компетенций. Каждое значение уровня подкреплено evidence (сессия + задача).
+# Правила изменения — docs/SESSION-CLOSE.md §3. null = не измерялось.
+schema: 1
+levels: "0 — с нуля; 1..7 — ступени curriculum/tree.yaml"
+sections:
+  # id раздела из curriculum/tree.yaml (sections:); добавляется запись при первом доказательстве.
+  # Пример заполненной записи (не данные!):
+  #   num:
+  #     proven_level: 2
+  #     proven_with_help: 3
+  #     ceiling: 3
+  #     confidence: med          # low | med | high
+  #     evidence:
+  #       - {session: "2026-12-12_1100", item_id: "bank:...", outcome: solved_unaided, note: "…"}
+  num: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
+  frac: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
+  ratio: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
+  numsys: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
+  nt: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
+  alg: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
+  eq: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
+  func: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
+  param: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
+  geom: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
+  trig: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
+  stereo: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
+  calc: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
+  comb: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
+  prob: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
+  logic: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
+  model: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
+  olymp: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
+  code: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}   # Python: 1 базовый … 4 алгоритмы (ASSESSMENT §3)
+abilities:        # контур способностей (по желанию, отдельно от предметной карты)
+  reasoning: null
+  memory: null
+  speed: null

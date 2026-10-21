@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="title desc">
+<title id="title">Восемь направлений</title><desc id="desc">Из центра вверх идёт север, вправо восток, вниз юг, влево запад. Между ними северо-восток, юго-восток, юго-запад, северо-запад. Север и восток образуют прямой угол.</desc>
+<rect width="600" height="400" fill="#f4f7f9"/>
+<g stroke="#17364b" stroke-width="3" fill="none"><path d="M300 55V345M120 200H480M190 90L410 310M190 310L410 90"/><path d="M300 178H322V200"/></g>
+<circle cx="300" cy="200" r="5" fill="#17364b"/>
+<g font-family="sans-serif" font-size="20" fill="#17364b" text-anchor="middle"><text x="300" y="34">север</text><text x="470" y="77">северо-восток</text><text x="535" y="207">восток</text><text x="465" y="341">юго-восток</text><text x="300" y="380">юг</text><text x="130" y="341">юго-запад</text><text x="65" y="207">запад</text><text x="130" y="77">северо-запад</text></g>
+</svg>

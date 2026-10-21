@@ -1,0 +1,24 @@
+---
+id: "pypsy"
+title: "pypsy — психометрика: IRT, MIRT, CFA, CTT, GRM, DINA"
+url: "https://github.com/inuyasha2012/pypsy"
+license: "MIT"
+license_url: "https://github.com/inuyasha2012/pypsy/blob/master/LICENSE"
+redistribution: "full"
+fetch: "git clone https://github.com/inuyasha2012/pypsy && checkout f055fe1f4901b654d99d9a776152e8192e014f5f; см. sources/pypsy/fetch.py"
+language: "en"
+levels: [3, 4, 5, 6, 7]
+retrieved: "2026-10-20"
+attribution: "pypsy contributors, MIT License."
+upstream_repo: "https://github.com/inuyasha2012/pypsy"
+upstream_commit: "f055fe1f4901b654d99d9a776152e8192e014f5f"
+role: "18 модулей плюс 10 демо-скриптов (irt, mirt, cfa, ctt, grm, dina, mcmc_dina). Позволяет проверить на собственных данных, что адаптивная выдача не хуже фиксированной — до того, как внедрять адаптивность."
+limitations: "Старый API, последний коммит — 2020 год. Для воспроизводимости в тестах лучше py-irt; pypsy полезен как эталон и как демо."
+published: true
+runtime_integration: none — код не подключён к пользовательскому runtime
+status:
+  availability: reachable
+  download: downloaded
+  run: not_executed
+  item_qa: schema_validated
+  rights: permissive

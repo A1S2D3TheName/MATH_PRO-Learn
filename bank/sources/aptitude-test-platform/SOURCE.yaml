@@ -1,0 +1,32 @@
+---
+id: "aptitude-test-platform"
+title: "Aptitude Test Platform — 600 вопросов двух разделов"
+url: "https://github.com/jidvish/aptitude-test-platform-public"
+license: "не указана (файла лицензии нет; происхождение исходных markdown-файлов не документировано)"
+license_url: "https://github.com/jidvish/aptitude-test-platform-public"
+redistribution: "index-only"
+fetch: "git clone https://github.com/jidvish/aptitude-test-platform-public && checkout c62e962bf34b91d354d5d9fecfb7bae2f2094a52; см. sources/aptitude-test-platform/fetch.py"
+language: "en"
+levels: [3, 4, 5, 6]
+retrieved: "2026-10-20"
+attribution: "Aptitude Test Platform by jidvish — лицензия не указана, тексты не копируются."
+upstream_repo: "https://github.com/jidvish/aptitude-test-platform-public"
+upstream_commit: "c62e962bf34b91d354d5d9fecfb7bae2f2094a52"
+role: "Количественные способности (300) и логическое мышление (300) по трём уровням, с разбором каждого решения. Оглавление полезно как карта тем количественных способностей."
+limitations: "Тексты и разборы не копируются. Варианты ответа в сгенерированном банке — машинно сгенерированные отвлекающие варианты; качество распределения правильных ответов не проверялось. Часть вопросов имеет в формулировке `$…$`-LaTeX."
+published: true
+runtime_integration: none — оглавление не подключено к пользовательскому runtime и
+  не сопоставлено с topic_id
+status:
+  availability: reachable
+  download: metadata_only
+  run: not_executed
+  item_qa: schema_validated
+  rights: unclear
+index:
+  total_positions: 600
+  preview_records: 0
+  positional_records: 600
+  contains_task_text: false
+  contains_answers: false
+  contains_solutions: false

@@ -1,0 +1,17 @@
+# Единственная точка входа для следующего агента. Обновляется при закрытии сессии
+# (поля и правила — docs/SESSION-CLOSE.md §3). Не править вручную посреди занятия.
+schema: 1
+phase: assessment            # assessment | learning
+stage_current: null          # заполняется после диагностики (docs/ASSESSMENT.md §6)
+entry_stage: 3               # стартовая ступень лесенки диагностики
+last_session: null           # id последней закрытой сессии
+last_session_date: null      # YYYY-MM-DD, со слов ученика
+sessions_total: 0
+frontier: []                 # [{section, topic_id, why}] — следующие темы (после диагностики)
+next_suggested: >
+  Первая сессия диагностики: обзор — по одной зондирующей задаче в каждом разделе
+  (docs/ASSESSMENT.md §5, сессия 1).
+open_questions: []           # гипотезы на проверку из observations.md
+notes: >
+  Ученик: начало слишком лёгкое — определить уровень быстро. Интерфейс не нужен.
+  Формат команд — AGENTS.md §2.

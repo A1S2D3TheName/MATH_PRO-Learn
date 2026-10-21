@@ -1,0 +1,32 @@
+---
+id: "iq-measurer"
+title: "IQ Measurer — 200 вопросов, 4 когнитивных домена"
+url: "https://github.com/Ksound22/iq-measurer"
+license: "не указана (в репозитории нет файла лицензии; по умолчанию — все права защищены)"
+license_url: "https://github.com/Ksound22/iq-measurer"
+redistribution: "index-only"
+fetch: "git clone https://github.com/Ksound22/iq-measurer && checkout 401ceca03d0bd603c4cabd19085d717e97c00f86; см. sources/iq-measurer/fetch.py"
+language: "en"
+levels: [1, 2, 3, 4, 5, 6]
+retrieved: "2026-10-20"
+attribution: "IQ Measurer by Ksound22 — лицензия не указана, тексты не копируются."
+upstream_repo: "https://github.com/Ksound22/iq-measurer"
+upstream_commit: "401ceca03d0bd603c4cabd19085d717e97c00f86"
+role: "Матрицы, вербальные аналогии, рабочая память, скорость обработки. Меряет общие способности, а не знание предмета: это отдельный контур, его нельзя складывать с предметными баллами в один показатель."
+limitations: "Тексты вопросов не копируются (нет лицензии). В каталоге — только оглавление: домен, сложность, число вариантов, наличие SVG, лимит времени. Оценка IQ в самом приложении — самодельная («IRT-вдохновлённая»), психометрической валидности не имеет."
+published: true
+runtime_integration: none — оглавление не подключено к пользовательскому runtime;
+  контур общих способностей ведётся отдельно от предметного
+status:
+  availability: reachable
+  download: metadata_only
+  run: not_executed
+  item_qa: schema_validated
+  rights: unclear
+index:
+  total_positions: 200
+  preview_records: 0
+  positional_records: 200
+  contains_task_text: false
+  contains_answers: false
+  contains_solutions: false

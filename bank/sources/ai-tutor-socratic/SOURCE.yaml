@@ -1,0 +1,25 @@
+---
+id: "ai-tutor-socratic"
+title: "MathMisconception-IN — граф знаний, каталог заблуждений и сократический каркас"
+url: "https://github.com/NavyashreeNS/ai-tutor"
+license: "MIT"
+license_url: "https://github.com/NavyashreeNS/ai-tutor/blob/main/LICENSE"
+redistribution: "full"
+fetch: "git clone https://github.com/NavyashreeNS/ai-tutor && checkout a276b1ca876c04de2d80090df4a2cf899dd3cbd2; см. sources/ai-tutor-socratic/fetch.py"
+language: "en"
+levels: [1, 2, 3]
+retrieved: "2026-10-20"
+attribution: "MathMisconception-IN, MIT License."
+upstream_repo: "https://github.com/NavyashreeNS/ai-tutor"
+upstream_commit: "a276b1ca876c04de2d80090df4a2cf899dd3cbd2"
+role: "Готовый каркас для блока Error diagnosis: 18 концепций с пререквизитами и сложностью, 33 типичных заблуждения, 51 вопрос с привязкой к заблуждениям и ветвлением follow-up. Приём — ступени 1–3 (числа, дроби, проценты)."
+limitations: "Схема ориентирована на NCERT (Индия), в `items/` нет текстов правил и пояснений — только идентификаторы и краткие подписи. Каталог заблуждений заявляет 34 записи, фактически содержит 33 — расхождение зафиксировано, не исправлено. Английский язык."
+published: true
+runtime_integration: none — каталог заблуждений не подключён к пользовательскому runtime
+  и не сопоставлен с topic_id
+status:
+  availability: reachable
+  download: downloaded
+  run: not_executed
+  item_qa: schema_validated
+  rights: permissive

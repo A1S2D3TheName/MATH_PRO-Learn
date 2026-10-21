@@ -1,0 +1,38 @@
+---
+id: "math-500-ru"
+title: "MATH-500-Russian — индекс 500 позиций (тексты не публикуются)"
+url: "https://huggingface.co/datasets/evilfreelancer/MATH-500-Russian"
+license: "не указана в карточке датасета; отдельная лицензия на русский перевод не подтверждена"
+license_url: "https://huggingface.co/datasets/evilfreelancer/MATH-500-Russian"
+redistribution: "index-only"
+fetch: "python sources/math-500-ru/fetch.py — полностью offline: читает записанный preview.json (10 записей) и строит items/index.jsonl из 500 индексных позиций (10 с preview-метаданными, 490 позиционных). Сеть не используется, каталог raw/ не создаётся, полный test.jsonl не скачивается и не сохраняется."
+language: "ru"
+levels: [4, 5, 6, 7]
+retrieved: "2026-10-20"
+attribution: "Индекс соответствует MATH-500 (HuggingFaceH4) и PRM800K (OpenAI) — MIT — по полю unique_id; русский перевод evilfreelancer/MATH-500-Russian лицензии не имеет, его тексты не публикуются."
+upstream_repo: "https://huggingface.co/datasets/evilfreelancer/MATH-500-Russian"
+upstream_commit: "bf0c9320c19aba3ee331d84fd206804836213730"
+role: "Единственный найденный русскоязычный банк олимпиадного уровня. Опубликован только индекс: 500 позиций, 10 из них с preview-метаданными (unique_id, предмет, уровень) и 490 позиционных заполнителей. Текстов задач, ответов и решений нет. Английский оригинал тех же задач целиком доступен под MIT в sources/math-prm800k."
+limitations: "Отдельная лицензия на русский перевод не подтверждена — лицензия MIT исходного MATH на перевод не распространяется. Полный корпус не скачивается, не сохраняется и не пересобирается через любой предусмотренный путь. huggingface.co из окружения напрямую недоступен (ошибка TLS). Условия корпуса содержат служебную разметку [asy], рисунки не выводятся. Индекс не является набором решаемых задач: ни условий, ни ответов, ни разборов в нём нет."
+published: true
+runtime_integration: "none — индекс не подключён к пользовательскому runtime и не сопоставлен с topic_id"
+status:
+  availability: "reachable"
+  download: "metadata_only"
+  run: "not_executed"
+  item_qa: "schema_validated"
+  rights: "unclear"
+license_gate:
+  state: "blocked_pending_written_permission"
+  reason: "Права на машинный перевод (qwen2.5:32b) не подтверждены; в карточке датасета лицензия не указана."
+  to_change: "Только письменное разрешение правообладателя русского перевода, покрывающее публикацию текстов. Молчание мейнтейнера разрешением не считается."
+  review: "math_repo_education/review/RESOLUTION.md, finding R-01"
+index:
+  total_positions: 500
+  preview_records: 10
+  positional_records: 490
+  contains_task_text: false
+  contains_answers: false
+  contains_solutions: false
+  preview_file: "sources/math-500-ru/preview.json"
+  preview_provenance: "метаданные 10 первых позиций взяты из MIT-датасета openai/prm800k (prm800k/math_splits/test.jsonl), коммит 7ecc794703b2877f63226f2477a49b34f9b25163"

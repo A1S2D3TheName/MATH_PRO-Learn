@@ -1,0 +1,25 @@
+---
+id: "minif2f"
+title: "miniF2F — 244 задачи в неформальной постановке и на Lean 4"
+url: "https://github.com/yangky11/miniF2F"
+license: "MIT"
+license_url: "https://github.com/yangky11/miniF2F/blob/main/LICENSE"
+redistribution: "full"
+fetch: "git clone https://github.com/yangky11/miniF2F && checkout c605019c4ebfda74d37bbb83e9c5774fc8b67c14; см. sources/minif2f/fetch.py"
+language: "en"
+levels: [6, 7]
+retrieved: "2026-10-20"
+attribution: "miniF2F — 244 задачи в неформальной постановке и на Lean 4"
+upstream_repo: "https://github.com/yangky11/miniF2F"
+upstream_commit: "c605019c4ebfda74d37bbb83e9c5774fc8b67c14"
+role: "Мост «задача → формальное утверждение»: 244 неформальных условия с неформальным доказательством и ссылкой на формализацию Lean 4. Источник для блока доказательств и для проверки, что агент доводит задачу до формы."
+limitations: "Только английский, верхний уровень (AIME/IMO-уровень). Формальные файлы `.lean` не копируются — в каталоге только ссылка и путь. В репозитории 488 записей: 244 в `valid` и 244 в `test`; заявленное «244» относится к одному сплиту."
+published: true
+runtime_integration: none — задачи не подключены к пользовательскому runtime и не
+  сопоставлены с topic_id
+status:
+  availability: reachable
+  download: downloaded
+  run: not_executed
+  item_qa: schema_validated
+  rights: permissive
