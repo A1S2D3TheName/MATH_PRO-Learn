@@ -12,9 +12,34 @@ sections:
   #     confidence: med          # low | med | high
   #     evidence:
   #       - {session: "2026-12-12_1100", item_id: "bank:...", outcome: solved_unaided, note: "…"}
-  num: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
-  frac: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
-  ratio: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
+  num:
+    proven_level: 1
+    proven_with_help: null
+    ceiling: null
+    confidence: med
+    evidence:
+      - {session: "2026-10-21_0745", item_id: "agent-gen:num-add-370-486", outcome: solved_unaided, note: "370+486=856, разложение по разрядам, уверенность 3"}
+      - {session: "2026-10-21_0745", item_id: "agent-gen:num-divide-90-by-5", outcome: solved_unaided, note: "90:5=18 через 50+40"}
+      - {session: "2026-10-21_0745", item_id: "agent-gen:num-divide-90-by-2", outcome: unsolved, note: "90:2=35 дважды (эталон 45); ошибка воспроизвелась"}
+  frac:
+    proven_level: 1
+    proven_with_help: null
+    ceiling: null
+    confidence: med
+    evidence:
+      - {session: "2026-10-21_0745", item_id: "agent-gen:frac-quarter-of-200", outcome: solved_unaided, note: "1/4 от 200 = 50 через 1/4 от 100 = 25"}
+      - {session: "2026-10-21_0745", item_id: "agent-gen:frac-compare-thirds-fifths", outcome: solved_unaided, note: "1/3 > 1/5, обоснование через делитель"}
+      - {session: "2026-10-21_0745", item_id: "agent-gen:frac-3of4-of-200", outcome: unsolved, note: "3/4 от 200 — нет ответа; доля не-единичная не берётся"}
+      - {session: "2026-10-21_0745", item_id: "agent-gen:frac-half-of-90", outcome: partial, note: "1/2 от 90 = 35, сбой в делении"}
+  ratio:
+    proven_level: 2
+    proven_with_help: null
+    ceiling: null
+    confidence: med
+    evidence:
+      - {session: "2026-10-21_0745", item_id: "agent-gen:ratio-10pct-of-250", outcome: solved_unaided, note: "10% от 250 = 25 через разбиение 100+100+50"}
+      - {session: "2026-10-21_0745", item_id: "agent-gen:ratio-250-plus-10pct", outcome: solved_unaided, note: "250+10% = 275, двухшаговый процент"}
+      - {session: "2026-10-21_0745", item_id: "agent-gen:percent-two-states-school", outcome: unsolved, note: "пороговая задача: 60% → 55% после перевода 5 девочек; гипотеза 100 проверена и отброшена, ответа нет"}
   numsys: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
   nt: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
   alg: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
