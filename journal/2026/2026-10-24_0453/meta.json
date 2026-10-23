@@ -1,0 +1,74 @@
+{
+  "id": "2026-10-24_0453",
+  "date": "2026-10-24",
+  "start_time": "04:53",
+  "end_time": "06:35",
+  "duration_min": 102,
+  "mode": "free",
+  "status": "closed",
+  "closed_late": false,
+  "phase_at_start": "assessment",
+  "completeness": "verbatim",
+  "items": [
+    {
+      "item_id": "free:decimal-carry",
+      "origin": "agent-generated",
+      "section": null,
+      "stage": null,
+      "outcome": "partial",
+      "hints_max_level": 1,
+      "hint_count": 1,
+      "help_requests": 0,
+      "self_corrections": 0,
+      "confidence_before": null,
+      "answer_checked_by": "by_hand"
+    },
+    {
+      "item_id": "free:binary-counting",
+      "origin": "agent-generated",
+      "section": null,
+      "stage": null,
+      "outcome": "solved_hinted",
+      "hints_max_level": 1,
+      "hint_count": 1,
+      "help_requests": 0,
+      "self_corrections": 0,
+      "confidence_before": null,
+      "answer_checked_by": "code"
+    },
+    {
+      "item_id": "free:overflow-3bit",
+      "origin": "agent-generated",
+      "section": null,
+      "stage": null,
+      "outcome": "solved_unaided",
+      "hints_max_level": 0,
+      "hint_count": 0,
+      "help_requests": 0,
+      "self_corrections": 0,
+      "confidence_before": null,
+      "answer_checked_by": "code"
+    },
+    {
+      "item_id": "free:sign-order",
+      "origin": "agent-generated",
+      "section": null,
+      "stage": null,
+      "outcome": "revealed",
+      "hints_max_level": 2,
+      "hint_count": 1,
+      "help_requests": 1,
+      "self_corrections": 0,
+      "confidence_before": null,
+      "answer_checked_by": "code"
+    }
+  ],
+  "student_report_present": false,
+  "files_touched": [
+    "journal/2026/2026-10-24_0453/work/binary-arithmetic.md",
+    "learner/problems-seen.jsonl",
+    "learner/review-queue.yaml",
+    "learner/state.yaml",
+    "journal/INDEX.md"
+  ]
+}
