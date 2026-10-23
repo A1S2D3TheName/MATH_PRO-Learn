@@ -1,5 +1,9 @@
 # Очередь повторений. Дозапись при закрытии сессии. Интервалы (дни): 1, 3, 7, 16, 35, 75.
 schema: 1
-items: []
+items:
+  - {ref: "topic:free-decimal-carry", due: "2026-10-25", streak: 0, last_session: "2026-10-24_0453"}
+  - {ref: "topic:free-binary-counting", due: "2026-10-25", streak: 0, last_session: "2026-10-24_0453"}
+  - {ref: "topic:free-overflow-3bit", due: "2026-10-25", streak: 1, last_session: "2026-10-24_0453"}
+  - {ref: "topic:free-sign-order", due: "2026-10-25", streak: 0, last_session: "2026-10-24_0453"}
 # Формат элемента:
 # - {ref: "bank:<source>:<id>" | "topic:<id>", due: "YYYY-MM-DD", streak: 0, last_session: "<id>"}

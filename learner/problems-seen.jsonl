@@ -1,0 +1,4 @@
+{"session":"2026-10-24_0453","item_id":"free:decimal-carry","outcome":"partial","revealed":false,"hints_max_level":1,"date":"2026-10-24"}
+{"session":"2026-10-24_0453","item_id":"free:binary-counting","outcome":"solved_hinted","revealed":false,"hints_max_level":1,"date":"2026-10-24"}
+{"session":"2026-10-24_0453","item_id":"free:overflow-3bit","outcome":"solved_unaided","revealed":false,"hints_max_level":0,"date":"2026-10-24"}
+{"session":"2026-10-24_0453","item_id":"free:sign-order","outcome":"revealed","revealed":true,"hints_max_level":2,"date":"2026-10-24"}
