@@ -12,25 +12,127 @@ sections:
   #     confidence: med          # low | med | high
   #     evidence:
   #       - {session: "2026-12-12_1100", item_id: "bank:...", outcome: solved_unaided, note: "…"}
-  num: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
-  frac: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
-  ratio: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
-  numsys: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
-  nt: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
-  alg: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
-  eq: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
-  func: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
-  param: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
-  geom: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
-  trig: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
-  stereo: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
-  calc: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
-  comb: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
-  prob: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
-  logic: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
-  model: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
-  olymp: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}
-  code: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}   # Python: 1 базовый … 4 алгоритмы (ASSESSMENT §3)
+  num:
+    proven_level: null        # одна задача уровень не меняет (SESSION-CLOSE §3)
+    proven_with_help: null
+    ceiling: null
+    confidence: null
+    evidence:
+      - {session: "2026-11-06_2300", item_id: "agent-generated:2026-11-06_2300:A1", outcome: partial, note: "A1: финальное число совпало с проверенным, ход неверен (разложение только по квадратам разрядов) — partial"}
+  frac:
+    proven_level: null        # одна задача уровень не меняет (SESSION-CLOSE §3)
+    proven_with_help: null
+    ceiling: null
+    confidence: null
+    evidence:
+      - {session: "2026-11-06_2300", item_id: "agent-generated:2026-11-06_2300:A2", outcome: unsolved, note: "A2: пропуск без решения"}
+  ratio:
+    proven_level: null        # одна задача уровень не меняет (SESSION-CLOSE §3)
+    proven_with_help: null
+    ceiling: null
+    confidence: null
+    evidence:
+      - {session: "2026-11-06_2300", item_id: "agent-generated:2026-11-06_2300:A3", outcome: partial, note: "A3: цепочка на базе 100 дошла до 96, итог как изменение в процентах не выражен — partial; дубль зонда из PR #2"}
+  numsys:
+    proven_level: null        # одна задача уровень не меняет (SESSION-CLOSE §3)
+    proven_with_help: null
+    ceiling: null
+    confidence: null
+    evidence:
+      - {session: "2026-11-06_2300", item_id: "agent-generated:2026-11-06_2300:A4", outcome: unsolved, note: "A4: ответ «от минус бесконечности до 4» при проверенных целых 0..4"}
+  nt:
+    proven_level: null        # одна задача уровень не меняет (SESSION-CLOSE §3)
+    proven_with_help: null
+    ceiling: null
+    confidence: null
+    evidence:
+      - {session: "2026-11-06_2300", item_id: "agent-generated:2026-11-06_2300:A5", outcome: unsolved, note: "A5: попытка от делителей 2 и 4, финального ответа нет (проверенный: 42)"}
+  alg:
+    proven_level: null        # одна задача уровень не меняет (SESSION-CLOSE §3)
+    proven_with_help: null
+    ceiling: null
+    confidence: null
+    evidence:
+      - {session: "2026-11-06_2300", item_id: "agent-generated:2026-11-06_2300:A6", outcome: unsolved, note: "A6: пропуск без попытки"}
+  eq:
+    proven_level: null        # одна задача уровень не меняет (SESSION-CLOSE §3)
+    proven_with_help: null
+    ceiling: null
+    confidence: null
+    evidence:
+      - {session: "2026-11-06_2300", item_id: "agent-generated:2026-11-06_2300:A7", outcome: partial, note: "A7: одна проверка подстановкой x=10, финального x нет (проверенный: 11) — partial"}
+  func:
+    proven_level: null        # одна задача уровень не меняет (SESSION-CLOSE §3)
+    proven_with_help: null
+    ceiling: null
+    confidence: null
+    evidence:
+      - {session: "2026-11-06_2300", item_id: "agent-generated:2026-11-06_2300:A8", outcome: unsolved, note: "A8: пропуск без попытки"}
+  param:
+    proven_level: null        # одна задача уровень не меняет (SESSION-CLOSE §3)
+    proven_with_help: null
+    ceiling: null
+    confidence: null
+    evidence:
+      - {session: "2026-11-06_2300", item_id: "agent-generated:2026-11-06_2300:A17", outcome: unsolved, note: "A17: «не знаю» (проверенный: a=1)"}
+  geom:
+    proven_level: null        # одна задача уровень не меняет (SESSION-CLOSE §3)
+    proven_with_help: null
+    ceiling: null
+    confidence: null
+    evidence:
+      - {session: "2026-11-06_2300", item_id: "agent-generated:2026-11-06_2300:A9", outcome: unsolved, note: "A9: пропуск без попытки"}
+  trig:
+    proven_level: null        # одна задача уровень не меняет (SESSION-CLOSE §3)
+    proven_with_help: null
+    ceiling: null
+    confidence: null
+    evidence:
+      - {session: "2026-11-06_2300", item_id: "agent-generated:2026-11-06_2300:A10", outcome: unsolved, note: "A10: пропуск без попытки"}
+  stereo:
+    proven_level: null        # одна задача уровень не меняет (SESSION-CLOSE §3)
+    proven_with_help: null
+    ceiling: null
+    confidence: null
+    evidence:
+      - {session: "2026-11-06_2300", item_id: "agent-generated:2026-11-06_2300:A11", outcome: unsolved, note: "A11: ответ 24 при проверенном 60, уверенность 2"}
+  calc:
+    proven_level: null        # одна задача уровень не меняет (SESSION-CLOSE §3)
+    proven_with_help: null
+    ceiling: null
+    confidence: null
+    evidence:
+      - {session: "2026-11-06_2300", item_id: "agent-generated:2026-11-06_2300:A12", outcome: unsolved, note: "A12: пропуск без попытки"}
+  comb:
+    proven_level: null        # одна задача уровень не меняет (SESSION-CLOSE §3)
+    proven_with_help: null
+    ceiling: null
+    confidence: null
+    evidence:
+      - {session: "2026-11-06_2300", item_id: "agent-generated:2026-11-06_2300:A13", outcome: solved_unaided, note: "A13: ответ 10 перебором 4+3+2+1, уверенность 3 — solved_unaided"}
+  prob:
+    proven_level: null        # одна задача уровень не меняет (SESSION-CLOSE §3)
+    proven_with_help: null
+    ceiling: null
+    confidence: null
+    evidence:
+      - {session: "2026-11-06_2300", item_id: "agent-generated:2026-11-06_2300:A14", outcome: unsolved, note: "A14: пропуск («хз»)"}
+  logic:
+    proven_level: null        # одна задача уровень не меняет (SESSION-CLOSE §3)
+    proven_with_help: null
+    ceiling: null
+    confidence: null
+    evidence:
+      - {session: "2026-11-06_2300", item_id: "agent-generated:2026-11-06_2300:A15", outcome: unsolved, note: "A15: ответ «да» при проверенном «не обязательно», уверенность 3"}
+  model:
+    proven_level: null        # одна задача уровень не меняет (SESSION-CLOSE §3)
+    proven_with_help: null
+    ceiling: null
+    confidence: null
+    evidence:
+      - {session: "2026-11-06_2300", item_id: "agent-generated:2026-11-06_2300:A16", outcome: partial, note: "A16: ответа нет; затруднение — 60 км за 1,5 ч (проверенный: 40 км/ч) — partial"}
+  olymp: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}   # not_probed в 2026-11-06_2300: сессия закрыта учеником до зонда
+  code: {proven_level: null, proven_with_help: null, ceiling: null, confidence: null, evidence: []}   # Python: 1 базовый … 4 алгоритмы (ASSESSMENT §3); not_probed в 2026-11-06_2300, тему кода ученик закрыл (transcript #15)
 abilities:        # контур способностей (по желанию, отдельно от предметной карты)
   reasoning: null
   memory: null
